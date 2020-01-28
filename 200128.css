@@ -1,0 +1,85 @@
+
+/* 숨긴콘텐츠 */
+    .a11y-hidden, legend{
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        margin: -1px;
+        clip: rect(0,0,0,0);
+        clip-path: polygon(0 0, 0 0, 0 0);
+    }
+    /* CSS Module */
+    /* float 이슈를 해결하기 위한 CSS 선언 */
+.clearfix::after { 
+        display: block;
+        content: "";
+        clear: both;
+}
+
+/* 유효성 검사 배너 */
+.validation-list {
+    list-style-type: none;
+    margin: 25px 0 0 0;
+    padding-left: 0;
+}
+/* background image 배치 -  x, y 축으로 설정하는게 좋다.  */
+.validation-list  a {
+    background: url(./images/validation_icon.png) no-repeat 20px 50% ,
+                #ccc linear-gradient(180deg, #bbb , #eee);
+    border: 1px solid #aaa;
+    border-radius: 35px;
+    padding: 7px 10px 8px 45px;
+    margin-top: 10px;
+    display: block;
+    
+    
+}
+
+/* 웹관련 용어  */
+.term {
+    background: #ccc linear-gradient(180deg, #bbb, #eee);
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    margin: 20px 0 0 0;
+    padding: 15px; 
+    
+}
+.term-heading {
+    margin: 0;
+    font-size: 1.6rem;
+}
+.term-list {
+    margin: 15px 0 0 0;
+}
+.term-list div {
+    margin-top: 15px;
+}
+
+.term-list dd{
+    margin-left: 0;
+}
+.term-list-subject, .term-list-brief{
+    width: 145px;
+    float: right;
+}
+.term-list-subject {
+    color: #296897;   
+    font-weight: 400; 
+}
+.term-list-thumbnail {
+    float: left;
+}
+.term-list-thumbnail img {
+    vertical-align: top;
+}
+.term-list-brief {
+    margin-top: 5px;
+    line-height: 1.6;
+}
+.change-layout .term-list-subject, .change-layout .term-list-brief {
+    float: left;
+}
+.change-layout .term-list-thumbnail {
+    float: right;
+}
