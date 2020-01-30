@@ -1,0 +1,57 @@
+<body>
+<!-- Semantic 마크업 연습 -->
+<!--뉴스정보 구현  time, figure , article tag  사용-->
+    <section class="news">
+        <h2 class="news-heading">새소식</h2>
+        <a href="#" class="news-link">
+            <article class="news-item">
+                <h3 class="news-item-subject">W3C 사이트가 리뉴얼 되었습니다.</h3>
+                <time class="news-item-date" datetime="2020-01-30">2020.01.30</time>
+                <p class="news-item-brief">
+                    디자인 및 다양한 view 환경을 고려하여 구성되어 있으며, 
+                    기존보다 최신 정보 및 개발자를 위한 기술 가이드도 
+                    찾기 쉽도록 구성되어 있습니다.  
+                  </p>
+                <figure class="news-item-thumbnail">
+                    <img src="./images/news.gif" alt="">
+                    <figcaption>W3C 리뉴얼</figcaption>
+                </figure>
+            </article>
+        </a>
+        <a href="#" class="news-more" 
+                    target="_blank" 
+                    title="새소식"><span class="icon-plus"></span>더보기</a>
+    </section>
+<!-- 광고배너 구현  -->
+    <div class="gradient-box">
+        <section class="event">
+          <h2 class="event-heading">
+            신규 <span class="point-color">이벤트</span>
+          </h2>
+          <div id="event-datail">
+            <p class="event-thumbnail">
+              <img src="./images/free_gift.gif" 
+                   alt="이벤트 경품: 웹표준 핵심 가이드북 2 도서 증정"></p>
+            <p class="event-brief">
+              웹표준 핵심 가이드2 출시! 선착순 500명 한정으로 증정.
+            </p>
+          </div>
+          <div class="btn-event">
+            <button class="btn-event-prev" aria-label="이전 이벤트 보기"></button>
+            <button class="btn-event-next" aria-label="다음 이벤트기"></button>
+          </div>
+        </section>
+        <section class="related">
+          <h2 class="related-heading">
+            관련<span class="point-color">사이트</span>
+          </h2>
+          <ul class="related-link">
+            <li><a href="#"></a>멀티캠퍼스</li>
+            <li><a href="#"></a>W3C</li>
+            <li><a href="#"></a>CSS ZenGarden</li>
+            <li><a href="#"></a>웹접근성 연구소</li>
+            <li><a href="#"></a>Web Standards</li>
+          </ul>
+        </section>
+      </div>
+</body>
