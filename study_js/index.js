@@ -158,15 +158,3 @@ console.log(star5);
 
 //16. 역정삼각형 출력하기
 
-var line = 5;
-var star6 = '';
-for (var i = 0; i < line; i++) {
-  for (var j = 4; j > line - i - 1; j--) {
-    star6 += ' ';
-  }
-  for (var a = 10; a > (i * 2) + 1; a--) {
-    star6 += '*';
-  }
-  star6 += '\n';
-}
-console.log(star6);
