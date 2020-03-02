@@ -107,7 +107,7 @@ for (var i = 0; i < 5; i++) {
   for (var a = 0; a < 5 - i; a++) {
     star2 += '*';
   }
-  star += '\n';
+  star2 += '\n';
 }
 console.log(star2);
 
