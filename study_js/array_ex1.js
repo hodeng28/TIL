@@ -41,8 +41,8 @@ console.log(getValues('completed')); // [ false, true, false ]
 // 참고: Array.prototype.sort
 
 function sortBy(key) {
-  const copy = [...todos]
-  return copy.sort((a, b) => a[key] > b[key] ? 1 : (a[key] < b[key]) ? -1 : 0 );
+  
+  return todos.sort((a, b) => a[key] > b[key] ? 1 : (a[key] < b[key]) ? -1 : 0 );
 }
 
 console.log(sortBy('id'));
@@ -71,7 +71,7 @@ console.log(todos);
 // todos에서 삭제할 요소의 id를 인수로 전달하면 해당 요소를 삭제하는 함수를 작성하라.
 
 function removeTodo(id) {
-  todos = todos.filter(todo => todo.id !== 2);
+  todos = todos.filter(todo => todo.id !== id);
 }
 
 removeTodo(2);
@@ -84,12 +84,14 @@ console.log(todos);
 // (기존 객체의 특정 프로퍼티를 변경/추가하여 새로운 객체를 생성하려면 Object.assign 또는 스프레드 문법을 사용한다.)
 
 function toggleCompletedById(id) {
-  todos.map(todo => {
-    if (todo.id === id) {
-      todo.completed = !todo.completed;
-    }
-    return todos;
-  });
+  // todos.map(todo => {
+  //   if (todo.id === id) {
+  //     todo.completed = !todo.completed;
+  //   }
+  //   return todos;
+  // });
+
+  todos = todos.map(todo => (todo.id === id ? {...todo, completed: !todo.completed } : todo));
 }
 
 toggleCompletedById(2);
@@ -103,7 +105,7 @@ console.log(todos);
 // 기존 객체의 특정 프로퍼티를 변경/추가하여 새로운 객체를 생성하려면Object.assign 또는 스프레드 문법을 사용한다.
 
 function toggleCompletedAll() {
-  return todos.forEach( todo => todo.completed = true);
+  todos.map( todo => ({ todo.completed: true }));
 }
 
 toggleCompletedAll();
@@ -117,7 +119,7 @@ console.log(todos);
 // 단, for 문, Array#forEach는 사용하지 않도록 하자.
 
 function countCompletedTodos() {
-  return todos.filter(todo => todo.completed === true).length;
+  return todos.filter(todo => todo.completed).length;
 }
 
 console.log(countCompletedTodos()); 
@@ -129,7 +131,7 @@ console.log(countCompletedTodos());
 // 단, for 문, Array#forEach는 사용하지 않도록 하자.
 
 function getMaxId() {
-  return Math.max(...todos.map(todo => todo.id));
+  return todos.length ? Math.max(...todos.map(todo => todo.id)) : 0;
 }
 
 console.log(getMaxId());
