@@ -1,3 +1,5 @@
+<!-- 마우스 정보 취득 -->
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -32,7 +34,7 @@
         initailMousePos.y = e.clientY - offset.y;
 
         document.addEventListener('mousemove', move);
-      });   // mousedown 이벤트가 발생한 상태ㅔ서 mousemove 이벤트가 발생하면 box 요소를 이동시킨다.
+      });   // mousedown 이벤트가 발생한 상태에서 mousemove 이벤트가 발생하면 box 요소를 이동시킨다.
       document.addEventListener('mouseup', () => {
         document.removeEventListener('mousemove', move);
       });   // mouseup 이벤트가 발생하면 mousemove 이벤트를 제거해 이동을 멈춘다.

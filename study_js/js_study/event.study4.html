@@ -1,0 +1,38 @@
+<!-- event handler property , addEventListener 
+ 내부의 this는 이벤트를 바인딩한 DOM 요소를 가리킨다. -->
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <button class="btn1">0</button>
+  <button class="btn2">0</button>
+  <script>
+    const $button1 = document.querySelector('.btn1');
+    const $button2 = document.querySelector('.btn2');
+
+    $button1.onclick = function (e) { // this는 이벤트를 바인딩한 DOM 요소를 가리킨다.
+      console.log(this);  // <button class="btn1">0</button>
+      console.log(e.currentTarget);  // <button class="btn1">0</button>
+      console.log(this === e.currentTarget);   //true
+
+      ++this.textContent;
+    };
+
+    $button2.addEventListener('click', function(e) {
+      console.log(this);   // <button class="btn2">0</button>
+      console.log(e.currentTarget);  // <button class="btn2">0</button>
+      console.log(this === e.currentTarget);  //true
+      
+      ++this.textContent
+    }); 
+  </script>
+</body>
+</html>
+
+<!--만약 화살표 함수를 사용하는 경우 화살표 함수는 자체의 this 바인딩을 
+갖지 않으므로 주의하자 (this를 사용하면 상위컨텍스트를 가리키게된다(window)) -->

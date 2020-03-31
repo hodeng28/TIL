@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text">
+  <div>
+    <em class="message"></em>
+  </div>
+  <script>
+    const $input = document.querySelector('input[type=text]');
+    const $msg = document.querySelector('.message');
+
+    $input.onkeyup = e => {
+      if (e.keyCode !== 13) return;
+      $msg.textContent = e.target.value;
+      e.target.value = '';
+      $msg.innerHTML += `<div>${$input.value}</div>`
+    };
+  </script>
+</body>
+</html>

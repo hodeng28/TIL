@@ -1,0 +1,28 @@
+<!-- 이벤트 핸들러에 인수 전달 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <label>User name <input type="text"></label>
+  <em class="message"></em>
+  <script>
+    const MIN_USER_NAME_LENGTH = 5; 
+    const $input = document.querySelector('input[type=text');
+    const $msg = document.querySelector('.message');
+
+    const checkUserNameLength = min => {
+      $msg.textContent
+        = $input.value.length < min ? `이름은 ${min}자 이상 입력해 주세요` : ''; 
+        };
+
+        $input.onblur = () => {
+          checkUserNameLength(MIN_USER_NAME_LENGTH);
+        };
+  </script>
+</body>
+</html>
+
