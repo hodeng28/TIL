@@ -5,20 +5,28 @@
   <title>Document</title>
 </head>
 <body>
-  <input type="text">
-  <div>
-    <em class="message"></em>
-  </div>
+  <input type="text" class="inputTodo">
+  <ul class="message"></ul>
+  
   <script>
-    const $input = document.querySelector('input[type=text]');
+    const $input = document.querySelector('.inputTodo');
     const $msg = document.querySelector('.message');
 
-    $input.onkeyup = e => {
+    $input.onkeydown = e => {
       if (e.keyCode !== 13) return;
-      $msg.textContent = e.target.value;
+      $msg.innerHTML += `<li><input type="checkbox"><span>${$input.value}</span><button>X</button></li>`
       e.target.value = '';
-      $msg.innerHTML += `<div>${$input.value}</div>`
+      console.log($input);
+      
     };
+    $msg.onchange = e => {
+      e.target.nextSibling.style.textDecoration = e.target.checked ? 'line-through' : '';
+    };
+
+    $msg.onclick = e => {
+      if (!e.target.matches('ul.message > li > button')) return;
+      $msg.removeChild(e.target.parentNode);
+    }
   </script>
 </body>
 </html>
