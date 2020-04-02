@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <style>
+    .message {
+      list-style: none;
+    }
+  </style>
 </head>
 <body>
   <input type="text" class="inputTodo">
@@ -26,7 +31,7 @@
     $msg.onclick = e => {
       if (!e.target.matches('ul.message > li > button')) return;
       $msg.removeChild(e.target.parentNode);
-    }
+    } 
   </script>
 </body>
 </html>
