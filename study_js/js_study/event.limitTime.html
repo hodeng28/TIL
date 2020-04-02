@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .timeZone {
+      padding: 0;
+      border: 1px solid;
+      width: 400px;
+      height: 20px;
+    }
+    .timeZone li {
+      display: inline-block;
+      list-style: none;
+      width: 20px;
+      height: 20px;
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+  <ul class="timeZone">
+  </ul>
+  <ul class="textZone">
+  </ul>
+  <script>
+    const $timeZone = document.querySelector('.timeZone');
+    const $text = document.querySelector('.textZone');
+    
+    // limited time logic
+    const limitTime = function () {
+      let counter = 0;
+      let timeoverText = 'timeover';
+      const interval = setInterval( () => {
+        counter += 1;
+        const elem = document.createElement('li');
+        $timeZone.appendChild(elem);
+
+        if (counter === 20) {
+          $text.innerHTML = timeoverText;
+          clearInterval(interval);  
+        }   
+      }, 1000);
+    };
+    limitTime();
+  </script>
+</body>
+</html>
