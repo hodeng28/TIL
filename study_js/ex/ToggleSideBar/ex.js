@@ -1,18 +1,6 @@
-const $sideNav = document.querySelector('.side-nav');
 const $toggle = document.querySelector('.toggle');
-const $main = document.querySelector('.main');
+const $container = document.querySelector('.container')
 
-
-
-
-$toggle.addEventListener('click', function(e){    
-  console.log($main);
-  
-  
-  
-  
+$toggle.addEventListener('click', () => {
+  $container.classList.toggle('active');
 });
-
-
-
-
