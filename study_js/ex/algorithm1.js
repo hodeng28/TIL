@@ -4,12 +4,18 @@
 // 예를 들어 8808은 3, 8888은 4로 카운팅 해야 한다.
 // (hint) 문자열 중 n번째에 있는 문자 : str.charAt(n) or str[n]
 
-function getCount8 () {
-  for (let i = 1; i <= 10,000; i++) {
-    if (true) {
-      
-    }
-  }
-}
-
-console.log(getCount8()); // 4000
+function getCount8 (n) {
+  
+  let count = 0;
+  
+  for (let i = 0; i < n; i++) {
+    let str = i + '';
+    for (let j = 0; j < str.length; j++) {
+      if (str[j] === '8') {
+        count += 1;
+      }
+    }  
+  } 
+  return count;
+};
+console.log(getCount8(10000));
