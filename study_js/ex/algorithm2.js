@@ -3,13 +3,14 @@
 function getMaxValueFromArray(array) {
   const max = Math.max(...array);  
   return max;
-}
+};
 
 console.log(getMaxValueFromArray([3, 6, -2, -5, 7, 3])); 
 
 
 function getMinValueFromArray(array) {
-
-}
+  const min = Math.min(...array);
+  return min;
+};
 
 console.log(getMinValueFromArray([3, 6, -2, -5, 7, 3]));

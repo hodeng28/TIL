@@ -8,6 +8,7 @@ const $increase = document.querySelector('.increase');
 const $decrease = document.querySelector('.decrease');
 
 
+
 const Counter = ( function () {
 
 let num = 0;
@@ -32,3 +33,6 @@ const counter = new Counter();
 $increase.onclick = counter.increase;
 $decrease.onclick = counter.decrease;
   
+
+
+
