@@ -4,8 +4,8 @@
 // 예를 들어, [-1, 1, 3, -2, 2, 0]이 주어졌을 때, [-1, -2, 0, 1, 2, 3]를 반환한다.
 
 function specialSort(array) {
- 
-}
+
+  };
 
 const testArray = [-1, 1, 3, -2, 2, 0];
   
@@ -13,11 +13,11 @@ console.log(specialSort(testArray));
 
 
 
-// function generateRange(from, to) { 
+// function generateRange(from, to)  
 //   const res = [];
 
 //   return res; 
 // }
 //   console.log(generateRange(10, 15));
 
-  
+    
