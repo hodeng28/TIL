@@ -3,6 +3,8 @@
 
 // super 호출하면 수퍼 클래스의 constructor(super-constructor)를 호출한다.
 
+// super 호출
+
 class Base {
   constructor(a, b) {
     this.a = a;
@@ -46,3 +48,28 @@ console.log(derived); // Derived { a: 1, b: 2, c: 3 }
 // Derived class의 constructor에 전달되고 
 
 // super 호출을 통해 Base class의 constructor에게 일부가 전달된다.
+
+
+
+// super 참조
+// 메소드 내에서 super를 참조하면 수퍼 클래스의 메소드를 호출할 수 있다.
+
+class Base {
+  constructor(name) {
+    this.name = name;
+  }
+
+  sayHi() {
+    return `Hi! ${this.name}`;
+  }
+}
+
+
+class Derived extends Base {
+  sayHi() {
+    return `${super.sayHi()}. how are you doing?`;
+  }
+}
+
+const derived = new Derived('Jung');
+console.log(derived.sayHi()); // Hi! Jung. how are you doing?
