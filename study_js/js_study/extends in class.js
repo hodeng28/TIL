@@ -44,3 +44,6 @@ console.log(derived);   // Derived {}
 
 console.log(drived instanceof Base1);  // true
 console.log(drived instanceof Base2);  // false
+
+
+
