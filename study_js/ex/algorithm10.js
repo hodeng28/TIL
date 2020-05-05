@@ -1,23 +1,14 @@
-// n개의 정수를 가진 배열이 있다. 이 배열은 양의 정수와 음의 정수를 모두 가지고 있다. 
-// 이 배열 을 좀 특별한 방법으로 정렬해야 한다. 음의 정수는 앞쪽에 내림차순으로, 
-// 양의 정수는 뒷쪽에 있어야 한다. 단, 인수로 주어진 원본 배열은 변경되지 않아야 한다.
-// 예를 들어, [-1, 1, 3, -2, 2, 0]이 주어졌을 때, [-1, -2, 0, 1, 2, 3]를 반환한다.
+// 배열의 첫 요소와 마지막 요소를 나타내는 정수를 인자로 받아 정수의 배열을 반환하는 함수를 완성하라. 
+// 예를 들어 인수가 [10, 15]인 경우, [ 10, 11, 12, 13, 14, 15 ]를 반환한다.
 
-function specialSort(array) {
-
-  };
-
-const testArray = [-1, 1, 3, -2, 2, 0];
-  
-console.log(specialSort(testArray)); 
-
-
-
-// function generateRange(from, to)  
-//   const res = [];
-
-//   return res; 
-// }
-//   console.log(generateRange(10, 15));
+function generateRange(from, to) { 
+    const res = [];
+  for (let i = from; i <= to; i++) {
+    console.log(i);
+    res.push(i);   
+  }
+  return res;
+};
+  console.log(generateRange(10, 15));
 
     
