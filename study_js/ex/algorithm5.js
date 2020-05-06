@@ -5,22 +5,15 @@
 
 
 function fibonacci(n) {
-  let a = 0;
-  let b = 1; 
-  for (let i = 0; )
-}
+  if (n < 2) return n;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+};
+
 
 console.log(fibonacci(2));
 console.log(fibonacci(3));
 console.log(fibonacci(4));
 console.log(fibonacci(5));
 console.log(fibonacci(6));
- 
-
-//  a + b = c;
-// b + c = d;
-// c + d = e;
-// 이런개씨발
-
 
 
