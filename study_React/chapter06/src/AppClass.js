@@ -1,5 +1,6 @@
-import React, { Component } from "react";
-import Login from "../src/p"
+import React, { Component } from 'react';
+import Login from '../src/pages/Login';
+import Header from '../src/components/templates/Header';
 
 class AppClass extends Component {
   state = {
@@ -8,6 +9,7 @@ class AppClass extends Component {
 
   handleLogin = (e) => {
     e.preventDefault();
+    console.log('클릭');
   };
 
   render() {
@@ -17,8 +19,8 @@ class AppClass extends Component {
         <Header isLogin={isLogin} />
         <Login handleLogin={this.handleLogin} />
       </>
-    );
-  }
-}
+    )
+  };
+};
 
 export default AppClass;

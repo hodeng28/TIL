@@ -1,0 +1,15 @@
+.buttonStyle {
+  width:100%;
+  border:2px solid blue;
+  color: blue;
+  background:#fff;
+  height:30px;
+}
+
+.buttonStyle:hover {
+  width:100%;
+  border:2px solid blue;
+  color:#fff;
+  background: blue;
+  height:30px;
+}
