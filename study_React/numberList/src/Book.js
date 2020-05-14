@@ -10,7 +10,7 @@ const Book = () => {
       _id: date.getTime(),
       name: "정호영",
       number: "01036300189"
-    }
+    },
   ]);
 
   const [inputState, setInputState] = useState({
@@ -20,6 +20,7 @@ const Book = () => {
 
   useEffect(() => {
     console.log('부모 컴퍼넌트 화면에 나타남');
+    console.log('bookState');
     return () => {
       console.log('부모 컴퍼넌트 화면에서 사라짐');
     };
@@ -33,7 +34,7 @@ const Book = () => {
     });
   };
 
-  const deleteNumber = () => {
+  const deleteNumber = (_id) => {
     setBookState(bookState.filter((i) => i._id !== _id));
   };
 
