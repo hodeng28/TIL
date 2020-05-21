@@ -1,0 +1,25 @@
+.headerStyle {
+  background-color:#FAE5B2;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 80px;
+}
+
+.menu {
+  font-size: 30px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  background-color:#FAE5B2;
+  color: black;
+  padding: 0;
+};
+
+.list {
+  text-decoration: none;
+}
+.link {
+  color: black;
+  text-decoration: none;
+}
