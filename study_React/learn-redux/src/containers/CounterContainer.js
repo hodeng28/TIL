@@ -4,7 +4,7 @@
 
 // useSelector는 리덕스 스토어의 상태를 조회하는 hook
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector, shallowEqual } from 'react-redux';
 import Counter from '../components/Counter';
 import { increase, decrease, setDiff } from '../modules/counter';
 
@@ -14,7 +14,12 @@ function CounterContainer() {
   const { number, diff } = useSelector(state => ({
     number: state.counter.number,
     diff: state.counter.diff
-  }));
+  }),
+    shallowEqual
+    // shaollowEqual은 react-redux 내장함수.
+    // 객체 안의 가장 겉에 있는 값들을 모두 비교
+    // 내부 값 비교 X
+  );
 
   const dispatch = useDispatch();
   // useDispatch는 리덕스 스토어의 dispatch를 함수에서 사용할수있게 해주는 hook
