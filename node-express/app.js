@@ -9,7 +9,6 @@ const helmet = require('helmet')
 const mainRouter = require('./router/mainRouter')
 const userRouter = require('./router/userRouter')
 
-require('express-async-errors');
 
 class AppServer extends http.Server {
   constructor(config) {
@@ -48,3 +47,5 @@ const createServer = (config = {}) => {
   const server = new AppServer();
   return server.start();
 }
+
+exports.createServer = createServer
