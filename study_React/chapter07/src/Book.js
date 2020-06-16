@@ -12,8 +12,8 @@ const initialState = {
   bookState: [
     {
       _id: 0,
-      name: "김건희",
-      phone: "01080775647",
+      name: "정호영",
+      phone: "01036300189",
     },
   ],
 };

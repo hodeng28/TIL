@@ -12,7 +12,7 @@ const LoginInput = ({
   userState,
 }) => {
   const handleKeyPress = (e) => {
-    if (e.keycode === 13) {
+    if (name === 13) {
       console.log(name);
       handleLogin();
     }

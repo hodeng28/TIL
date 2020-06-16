@@ -1,0 +1,20 @@
+.headerStyle {
+  width:100%;
+  height:58px;
+  background-color:  #00B5AD;
+  color:#fff;
+  font-weight: 700;
+  font-size: 150%;
+}
+
+.headerLogin {
+  display: block;
+  padding : 15px;
+  float:right;
+}
+
+.headerLogout {
+  margin-left:10px;
+  font-size:80%;
+  color: white;
+}

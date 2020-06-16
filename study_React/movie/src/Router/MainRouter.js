@@ -8,16 +8,10 @@ import getUpcoming from '../Page/getUpcoming';
 const MainRouter = () => {
   return (
     <Switch>
-      <Route path="/" component={getPopular} />
-      <Route path="/getUpcoming" component={getUpcoming} />
-      <Route path="/getNowPlaying" component={getNowPlaying} />
-      <Route
-        render={({ location }) => (
-          <div>
-
-          </div>
-        )}
-      />
+      <Route exact path="/" component={getNowPlaying} />
+      <Route exact path="/getUpcoming" component={getUpcoming} />
+      <Route exact path="/getNowPlaying" component={getPopular} />
+      <Route exact path="Seearch" component={Search} />
     </Switch>
   );
 };

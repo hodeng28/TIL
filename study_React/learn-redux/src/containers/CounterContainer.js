@@ -4,39 +4,40 @@
 
 // useSelector는 리덕스 스토어의 상태를 조회하는 hook
 import React from 'react';
-import { useDispatch, useSelector, shallowEqual } from 'react-redux';
+import { connect } from 'react-redux';
 import Counter from '../components/Counter';
 import { increase, decrease, setDiff } from '../modules/counter';
 
 
-function CounterContainer() {
-  // useSelector는 리덕스 스토어의 상태를 조회하는 hook
-  const { number, diff } = useSelector(state => ({
-    number: state.counter.number,
-    diff: state.counter.diff
-  }),
-    shallowEqual
-    // shaollowEqual은 react-redux 내장함수.
-    // 객체 안의 가장 겉에 있는 값들을 모두 비교
-    // 내부 값 비교 X
-  );
-
-  const dispatch = useDispatch();
-  // useDispatch는 리덕스 스토어의 dispatch를 함수에서 사용할수있게 해주는 hook
-  const onIncrease = () => dispatch(increase());
-  const onDecrease = () => dispatch(decrease());
-  const onSetDiff = diff => dispatch(setDiff(diff));
-
+function CounterContainer({ number, diff, Increase, Decrease, SetDiff }) {
   return (
     <Counter
+      // 상태,
       number={number}
       diff={diff}
-      onIncrease={onIncrease}
-      onDecrease={onDecrease}
-      onSetDiff={onSetDiff}
+      // 액션들을 디스패치하는 함수들을 props로 넣음
+      onIncrease={Increase}
+      onDecrease={Decrease}
+      onSetDiff={SetDiff}
     />
-  )
+  );
+}
+// 리덕스 스토어의 상태를 조회해서 어떤 것들을 props로 넣어줄지 정의.
+// 현재 리덕스 상태를 파라미터로 받아온다.
+const mapStateToProps = state => ({
+  number: state.counter.number,
+  diff: state.counter.diff
+});
+
+// 액션을 디스패치하는 함수를 만들어서 props로 넣어준다.
+// dispatch를 파라미터로 받아온다.
+const mapDispatchToProps = {
+  increase,
+  decrease,
+  setDiff
 };
 
-export default CounterContainer;
-
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(CounterContainer);

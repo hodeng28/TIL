@@ -1,18 +1,15 @@
-import React, { Component } from 'react';
+import React from "react";
+import "./App.scss";
+import Button from "./Component/Button";
 
-class App extends Component {
-  handleClick = () => {
-    import('./notify').then(({ default: notify }) => {
-      notify();
-    });
-  };
-  render() {
-    return (
-      <div>
-        <button onClick={this.handleClick}>Click Me</button>
+function App() {
+  return (
+    <div className="App">
+      <div className="ButtonWrap">
+        <Button>커스텀 버튼</Button>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default App;

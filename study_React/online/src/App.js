@@ -1,12 +1,29 @@
-import React from 'react';
-import Hello from './Hello';
-import Wrapper from './Wrapper';
-import InputSample from './InputSample';
+import React from "react";
+import { Route, Link } from "react-router-dom";
+import MainRouter from "./Rounter/MainRouter";
 
-function App() {
+const App = () => {
   return (
-    <InputSample />
-  )
-}
+    <div>
+      <h1>블로그에 오신걸 환영합니다.</h1>
+      <ul>
+        <li>
+          <NavLink exact to="/" activeStyle={activeStyle}>메인
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/About" activeStyle={activeStyle}>자기소개
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/Skill" activeStyle={activeStyle}>보유스킬
+          </NavLink>
+        </li>
+      </ul>
+      <hr />
+      <MainRouter />
+    </div>
+  );
+};
 
 export default App;

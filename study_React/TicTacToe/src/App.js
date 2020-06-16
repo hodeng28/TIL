@@ -1,11 +1,15 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import './App.css';
 
 function App() {
 
   const container = () => {
-    const [play, setPlay] = useState();
-    const [state, setState] = useState({
+    const [state, setState] = useState('X');
+    const [xState, setXstate] = useState([]);
+    const [OState, setOstate] = useState([]);
+    const [initState, setInitState] = useState({
       a1: "",
       a2: "",
       a3: "",
@@ -17,17 +21,27 @@ function App() {
       a9: "",
     });
   };
-  const result = () => {
 
+  const win = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+
+
+
+
+
+  const onClick = (e) => {
+    console.log(e.target.value);
+    setState();
+    return "x" ? "x" : "o";
   }
-
-
-  const onClick = () => {
-    return "x" ? "o" : "x";
-  }
-
-
-
   return (
 
     <div className="container">
