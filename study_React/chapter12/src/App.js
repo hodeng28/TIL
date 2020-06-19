@@ -1,22 +1,31 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
-import Home from './Home';
-import About from './About';
+import { NavLink } from 'react-router-dom';
+import MainRouter from './Router/MainRouter';
 
-function App() {
+const App = () => {
+  const activeStyle = {
+    background: "orange",
+    color: "green"
+  };
   return (
     <div>
+      <h1>블로그에 오신걸 환영합니다</h1>
       <ul>
         <li>
-          <Link to="/">홈</Link>
+          <NavLink exact to="/" activeStyle={activeStyle}>홈</NavLink>
         </li>
         <li>
-          <Link to="/about">소개</Link>
+          <NavLink to="/About" activeStyle={activeStyle}>소개</NavLink>
+        </li>
+        <li>
+          <NavLink to="/Skill" activeStyle={activeStyle}>보유스킬</NavLink>
+        </li>
+        <li>
+          <NavLink to="/History" activeStyle={activeStyle}>히스토리</NavLink>
         </li>
       </ul>
       <hr />
-      <Route exact path="/" component={Home} />
-      <Route path="/About" component={About} />
+      <MainRouter />
     </div>
   )
 }
