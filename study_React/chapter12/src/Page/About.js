@@ -1,5 +1,5 @@
 import React from 'react';
-import WithRouterView from '../Router/WithRouterView';
+// import WithRouterView from '../Router/WithRouterView';
 import { useLocation, useRouteMatch } from 'react-router-dom';
 
 const About = () => {
