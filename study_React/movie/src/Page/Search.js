@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { moviesApi } from "../api";
+// import { moviesApi } from "../api";
 
 const Search = () => {
   const [searchState, setSearchState] = useState([]);

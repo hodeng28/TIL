@@ -1,8 +1,8 @@
 // 액션타입 생성
 
-const SET_DIFF = 'counter/SET_DIFF';
-const INCREASE = 'counter/INCREASE';
-const DECREASE = 'counter/DECREASE';
+const SET_DIFF = 'Counter/SET_DIFF';
+const INCREASE = 'Counter/INCREASE';
+const DECREASE = 'Counter/DECREASE';
 
 // 액션 생성함수 만들기
 // export 키워드로 내보내기

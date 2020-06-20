@@ -9,7 +9,7 @@ const api = axios.create({
 const keyQuery = "api_key=10923b261ba94d897ac6b81148314a3f";
 
 //참고해서 사용해보세요
-export const moviesApi = {
+const moviesApi = {
   getMovie: (id) =>
     //특정 영화 디테일 데이터
     api.get(`movie/${id}?${keyQuery}`, {
@@ -17,15 +17,11 @@ export const moviesApi = {
     }),
   // 인기순위 데이터
   getPopular: (page = 1) =>
-    api.get(`movie/popular?${keyQuery}&page=${page}`).then((r) => {
-      return r.data;
-    }),
+    api.get(`movie/popular?${keyQuery}&page=${page}`).then((r) => r.data),
 
   //최신 영화 개봉작 순
   getUpcoming: (page = 1) =>
-    api.get(`movie/upcoming?${keyQuery}&page=${page}`).then((r) => {
-      return r.data;
-    }),
+    api.get(`movie/upcoming?${keyQuery}&page=${page}`).then((r) => r.data),
   //현재 상영작
   getNowPlaying: () => api.get(`movie/now_playing?${keyQuery}`),
   //영화 검색
@@ -34,5 +30,8 @@ export const moviesApi = {
       params: {
         query: encodeURIComponent(term),
       },
-    }),
+    })
+      .then((r) => r.data),
 };
+
+export default moviesApi;
