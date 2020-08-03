@@ -7,14 +7,24 @@
 </head>
 <body>
   <div id="app">
-    {{ str }}
+    <!-- <app-header v-bind: props 속성 이름="상위 컴포넌트의 데이터"></app-header> -->
+    <app-header v-bind:title="str"></app-header>
   </div>
+
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script>
     new Vue({
+      // 인스턴스 옵션
       el: '#app',
       data: {
-        str: 'hi'
+        str: '프롭스 문자열'
+      },
+      components: {
+        // '컴퓨넌트 이름' : 컴포넌트내용,
+        'app-header': {
+          props: ['title'],
+          template: '<h1>{{ title }}</h1>'
+        }
       }
     });
   </script>
