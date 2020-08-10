@@ -1,9 +1,11 @@
 # 공부 정리
 
-## HTML5, CSS3
+### HTML5, CSS3
 
-## JavaScript
+### JavaScript
 
-## React 
+### React 
 
-## Algorithm 연습
+### Algorithm 연습
+
+등등..
