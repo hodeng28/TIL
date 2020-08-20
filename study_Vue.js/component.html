@@ -10,7 +10,10 @@
     <!-- <app-header v-bind: props 속성 이름="상위 컴포넌트의 데이터"></app-header> -->
     <app-header v-bind:title="str"></app-header>
     <!-- <app-contents v-on:하위 컴퍼넌트에서 발생한 이벤트 이름="상위 컴포넌트의 메서드 이름"></app-contents> -->
-    <app-contents v-on:change="changeStr"></app-contents>
+    <app-contents  
+      v-bind:on-change="changeStr"
+    ></app-contents>
+    <!-- v-on:change="changeStr" -->
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -33,7 +36,8 @@
           template: '<h1>{{ title }}</h1>'
         },
         'app-contents': {
-          template: '<main>컨텐츠<button v-on:click="change">change</button></main>',
+          props: ['on-change'],
+          template: '<main>컨텐츠<button v-on:click="onC hange">change</button></main>',
           methods: {
             change() {
               this.$emit('change');
