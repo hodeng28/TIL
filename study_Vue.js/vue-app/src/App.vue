@@ -7,6 +7,8 @@
           id="username" 
           type="text" 
           v-model="username"
+          class="usernameInput"
+          v-bind:class="{ 'error': isError }"
         >
       </div>
       <div>
@@ -59,14 +61,21 @@ export default {
       //   .catch(error => {
       //     this.isError = true;
       //   })
-      this.initForm();
+      // this.initForm();
     },
-    initForm() {
-      this.username = '';
-      this.password = '';
-    }
+    // initForm() {
+    //   this.username = '';
+    //   this.password = '';
+    // },
   },
 };
 </script>
-<style>
+<style scoped>
+/* scoped - 현재 컴퍼넌트에만 적용 */
+  .usernameInput {
+    outline: none;
+  }
+  .usernameInput.error {
+    border: 3px solid yellow;
+  }
 </style>
