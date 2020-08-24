@@ -20,6 +20,7 @@ body {
   line-height: 1.5;
   background: #000, linear-gradient((to bottm, #fcfcfc, #eee));
   cursor: pointer;
+  color: #333;
 }
 .btn:hover::before {
   content: "";
@@ -36,18 +37,109 @@ body {
   background: #55a532 linear-gradient(#91dd70, #55ae2e);
 }
 
-.inputForm {
+/* Input */
+.input {
   height: 34px;
   padding: 0 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
   box-sizing: border-box;
   outline: none;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.75);
   font-size: 16px;
 }
 .inputForm:focus {
   border-color: #51a7e8;
   box-shadow: inset 0 1px 2px rgba(0,0,0,0.075),
-              ß0 0 5px rgba(81,167,232,0.5);
+              0 0 5px rgba(81,167,232,0.5);
+}
+.inputForm::-webkit-input-placeholder { color: #cacaca; }
+.inputForm::-ms-input-placeholder { color: #cacaca; }
+.inputForm::-moz-input-placeholder { color: #cacaca; }
+
+/* 헤더 */
+
+header {
+  border-bottom: 1px solid rgba(0,0,0,0.75);
+  box-shadow: 0 0 5px rgba(0,0,0,0.75);
+  background: #fff;
+}
+
+header .headerWrap {
+  display: flex;
+  justify-content: space-between;
+  max-width: 980px;
+  height: 78px;
+  margin: 0 auto;
+}
+
+header .headerMenu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+header .logo a {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: url("../img/logo.svg");
+  text-indent: -9999px;
+}
+
+header .logo a:hover {
+  background: url("../img/logo_on.svg");
+}
+
+header .mainMenu {
+  display: flex;
+}
+
+header .mainMenu li a {
+  display: block;
+  padding: 10px;
+  color: #3c4146;
+}
+header .mainMenu li a:hover {
+  color: #4078c0;
+}
+
+header .signMenu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+header .signBtn {
+  order: 2;
+  display: flex;
+}
+.signIn {
+  margin-right: 4px;
+}
+#searchForm {
+  order: 1;
+  margin-right: 12px;
+}
+#search {
+  width: 160px;
+  font-size: 14px;
+}
+#search + [type="submit"] {
+  display: none;
+}
+
+header .subMenu {
+  display: flex;
+  margin-right: 10px;
+}
+
+header .subMenu li a {
+  display: block;
+  padding: 8px;
+  font: 13px;
+  color: #3c4146;
+}
+
+header .subMenu li a:hover {
+  color: #4078c0;
 }
