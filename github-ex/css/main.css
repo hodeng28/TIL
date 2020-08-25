@@ -57,7 +57,32 @@ body {
 .inputForm::-ms-input-placeholder { color: #cacaca; }
 .inputForm::-moz-input-placeholder { color: #cacaca; }
 
-/* 헤더 */
+/* inner */
+.section {
+  position: relative;
+}
+
+.inner {
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* summary */
+.summaryTitle {
+  font-size: 38px;
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+ 
+.summaryDescription {
+  font-size: 26px;
+  color: #767676;
+  line-height: 1.5;
+}
+
+/* header */
 
 header {
   border-bottom: 1px solid rgba(0,0,0,0.75);
@@ -65,12 +90,10 @@ header {
   background: #fff;
 }
 
-header .headerWrap {
+header .inner {
   display: flex;
   justify-content: space-between;
-  max-width: 980px;
   height: 78px;
-  margin: 0 auto;
 }
 
 header .headerMenu {
@@ -142,4 +165,80 @@ header .subMenu li a {
 
 header .subMenu li a:hover {
   color: #4078c0;
+}
+
+/* main */
+
+.mainVisual {
+  position: relative;
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: cover;
+}
+.mainVisual::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.mainVisual .mainInner {
+  display: flex;
+  padding: 160px 0;
+}
+
+.mainVisual .mainSummary {
+  flex: 1;
+  margin-right: 90px;
+}
+
+.mainVisual .summaryTitle {
+  color: #fff;
+  font-size: 54px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 
+               0 1px 25px rgba(0, 0, 0, 0.75);
+}
+ 
+.mainVisual .summaryDescription {
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 
+               0 1px 25px rgba(0, 0, 0, 0.75); 
+}
+
+#signForm {
+  width: 340px;
+  margin-top: 9px;
+}
+
+#signForm .mainInput {
+  width: 100%;
+  height: 40px;
+}
+
+#signForm li {
+  margin-bottom: 17px;
+}
+
+#signForm li:last-child {
+  margin-bottom: 0;
+}
+
+#signForm .caption {
+  font-size: 12px;
+  margin-top: 5px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+  text-align: center;
+}
+
+#signForm [type="submit"] {
+  justify-content: center;
+  width: 100%;
+  height: 62px;
+  padding: 0 25px;
+  font-size: 20px;
 }
