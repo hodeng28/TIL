@@ -33,6 +33,7 @@
 </head>
 <body>
   <div class="container">
+    <!-- 헤더 -->
     <header class="section">
       <div class="headerWrap inner">
 
@@ -64,7 +65,7 @@
         </div>
       </div>
     </header>
-
+    <!-- 메인 -->
     <main class="section mainVisual">
       <div class="mainInner inner">
 
@@ -91,7 +92,7 @@
       </div>
     </main>
     
-    <!-- feature -->
+    <!-- 데이터  -->
     <section class="section feature">
 
       <div class="featureSummary">
@@ -132,6 +133,46 @@
     </div>
     </section>
 
+    <!-- 지도API -->
+    <section class="section map">
+      <div class="inner">
+
+        <div class="mapSummary">
+          <div class="summaryTitle">
+            Where is GitHub?
+          </div>
+          <div class="summaryDescription">
+            GitHub is where people build software. More than 18 million people use GitHub to discover, fork, and contribute to over 48 million projects.
+          </div>
+        </div>
+
+        <div id="mapApi"></div>
+      </div>
+    </section>
+
   </div>
+  <script>
+    function initMap () {
+      const myLatLng = {
+        lat: 37.782293,
+        lng: -122.391240
+      }
+      const map = new google.maps.Map(
+        document.getElementById('mapApi'),
+        {
+          center: myLatLng,
+          scrollwheel: false,
+          zoom: 18
+        }
+      );
+      const marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'GitHub'
+      });
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTQIlxBn5AfKGvsfJiormAE1esN3fcCkg&callback=initMap" async defer></script>
+</script>
 </body>
 </html>
