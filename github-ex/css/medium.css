@@ -1,0 +1,122 @@
+header.section .inner {
+  max-width: none;
+  height: auto;
+  padding: 0 20px;
+}
+header .inner,
+header .headerMenu {
+  display: block;
+}
+header .logo {
+  padding: 12px 0;
+}
+header .mainMenu {
+  display: block;
+  margin-bottom: 10px;
+}
+header .mainMenu li {
+  border-top: 1px solid #e5e5e5;
+}
+header .mainMenu li a {
+  padding: 16px 0;
+}
+header .signMenu {
+  display: block;
+}
+header .signBtn {
+  display: block;
+  padding: 10px 0;
+}
+header .signBtn .btn {
+  justify-content: center;
+}
+header .signBtn .signIn {
+  margin-right: 0;
+  margin-bottom: 12px;
+}
+#searchForm {
+  margin-right: 0;
+}
+#search {
+  width: 100%;
+  height: 42px;
+  text-align: center;
+}
+header .subMenu {
+  margin-top: 12px;
+  margin-right: 0;
+  justify-content: center;
+}
+header .toggle {
+  display: none;
+}
+header .toggle.on {
+  display: block;
+}
+#toggleBtn {
+  display: block;
+} 
+
+/* main */
+
+.mainVisual {
+  background-image: url("../img/bg-small.jpg");
+}
+.mainVisual .mainInner {
+  display: block;
+  max-width: none;
+  padding: 80px 20px;
+}
+
+.mainVisual .mainSummary {
+  text-align: center;
+  margin-right: 0;
+  margin-bottom: 50px;
+}
+
+#signForm {
+  width: auto;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* feature */  
+.feature .featureSummary {
+  padding: 66px 20px 0 20px;
+}
+
+.tiles ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.tiles li:nth-child(2) {
+  border-right: none;
+}
+.tiles li img {
+  padding: 14px 30% 24px;
+}
+
+/* map */
+
+.map .inner {
+  max-width: none;
+  padding: 80px 20px 0 20px;
+}
+
+.pricing .inner {
+  max-width: none;
+  padding: 80px 20px;
+}
+
+.pricing .card .cell2 {
+  font-size: 20px;
+}
+
+/* footer */
+footer .inner {
+  padding: 50px 20px;
+}
+footer .logo {
+  display: none;
+}
