@@ -294,12 +294,12 @@ header .subMenu li a:hover {
   height: 100%;
 }
 
-.tiles {
+.feature .tiles {
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
 }
 
-.tiles .inner {
+.feature .tiles .inner {
   max-width: 1200px;
 }
 
@@ -528,5 +528,45 @@ footer .logo:hover svg {
     max-width: 500px;
     margin: 0 auto;
   }
-}
 
+  /* feature */  
+  .feature .featureSummary {
+    padding: 66px 20px 0 20px;
+  }
+  
+  .tiles ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tiles li:nth-child(2) {
+    border-right: none;
+  }
+  .tiles li img {
+    padding: 14px 30% 24px;
+  }
+
+  /* map */
+
+  .map .inner {
+    max-width: none;
+    padding: 80px 20px 0 20px;
+  }
+
+  .pricing .inner {
+    max-width: none;
+    padding: 80px 20px;
+  }
+
+  .pricing .card .cell2 {
+    font-size: 20px;
+  }
+
+  /* footer */
+  footer .inner {
+    padding: 50px 20px;
+  }
+  footer .logo {
+    display: none;
+  }
+}
