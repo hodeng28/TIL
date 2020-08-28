@@ -133,6 +133,18 @@ header .mainMenu li a:hover {
   color: #4078c0;
 }
 
+#toggleBtn {
+  display: none;
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  width: 18px;
+  height: 24px;
+  cursor: pointer;
+  background: url("../img/toggle-btn.svg");
+  text-indent: -9999px;
+}
+
 header .signMenu {
   display: flex;
   align-items: center;
@@ -172,6 +184,7 @@ header .subMenu li a {
 header .subMenu li a:hover {
   color: #4078c0;
 }
+
 
 /* main */
 
@@ -490,12 +503,30 @@ footer .logo:hover svg {
     display: block;
   }
   #toggleBtn {
-    position: absolute;
-    top: 16px;
-    right: 20px;
-    width: 18px;
-    height: 24px;
-    cursor: pointer;
-    background: url("../img/toggle-btn.svg");
+    display: block;
   } 
+
+  /* main */
+
+  .mainVisual {
+    background-image: url("../img/bg-small.jpg");
+  }
+  .mainVisual .mainInner {
+    display: block;
+    max-width: none;
+    padding: 80px 20px;
+  }
+
+  .mainVisual .mainSummary {
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+
+  #signForm {
+    width: auto;
+    max-width: 500px;
+    margin: 0 auto;
+  }
 }
+
