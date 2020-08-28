@@ -1,0 +1,55 @@
+/* Common */
+.summaryTitle {
+  font-size: 34px !important;
+}
+ 
+.summaryDescription {
+  font-size: 22px;
+}
+
+/* feature */
+
+.tiles ul {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.tiles li {
+  border-right: none;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* map */
+
+#mapApi {
+  width: auto;
+  margin: 40px -20px 0 -20px;
+  border-left: none;
+  border-right: none;
+}
+
+.pricing .card {
+  display: block;
+}
+
+.pricing .card .cell2 {
+  border-left: none;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* footer */
+
+
+footer .links {
+  display: block;
+  float: none;
+  text-align: center;
+}
+
+footer .links:first-child {
+  margin-bottom: 20px;
+}
+
+footer .links li {
+  display: inline;
+}
