@@ -8,6 +8,7 @@ const helmet = require('helmet')
 
 const mainRouter = require('./router/mainRouter')
 const userRouter = require('./router/userRouter')
+const excelRouter = require('./router/excelRouter')
 
 const db = require('./model/db')
 
@@ -45,6 +46,8 @@ class AppServer extends http.Server {
   router() {
     this.app.use('/', mainRouter);
     this.app.use('/user', userRouter);
+    this.app.use('/excel', excelRouter);
+
     this.app.use((req, res, next) => {
       res.status(404)
       res.send("잘못된 경로입니다")
