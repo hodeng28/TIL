@@ -1,5 +1,6 @@
 <template>
   <div>
+    <ProgressBar></ProgressBar>
     <form v-on:submit.prevent="submitForm">
       <div>
         <label for="username">ID:</label>
@@ -38,6 +39,7 @@
 
 <script>
 import ToastPopup from '@/components/ToastPopup.vue';
+import ProgressBar from '@/components/ProgressBar.vue';
 
 // email 형식 체크 함수
 function validateEmail(email) {
@@ -47,7 +49,8 @@ function validateEmail(email) {
 
 export default {
   components: {
-    ToastPopup
+    ToastPopup,
+    ProgressBar
   },
   data() {
     return {
@@ -84,8 +87,13 @@ export default {
 };
 </script>
 
-<style scoped>
-/* scoped - 현재 컴퍼넌트에만 적용 */
+<style>
+  body {
+    margin: 0;
+  }
+  form {
+    padding: 5px 10px;
+  }
   .usernameInput {
     outline: none;
   }
