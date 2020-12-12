@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
 import ReactDom from 'react-dom';
 
+const useInput = initialValue => {
+  const [value, setValue] = useState(initialValue);
+  const onChange = e => {
+    console.log(e.target);
+  }
+  return { value };
+}
 
-function App() {
-
-  const [item, setItem] = useState(1);
-  const incrementItem = () => setItem(item + 1);
-  const decrementItem = () => setItem(item - 1);
+const App = () => {
+  const name = useInput("Mr.")
   return (
     <div className="App">
-      <h1>study react hook{item}</h1>
-      <h2>hi useState</h2>
-      <button onClick={incrementItem}>incrementItem</button>
-      <button onClick={decrementItem}>decrementItem</button>
+      <h1>study react hook</h1>
+      <input placeholder="Name" {...name} />
     </div>
   );
 }
