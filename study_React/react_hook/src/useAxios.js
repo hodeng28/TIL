@@ -29,8 +29,8 @@ useEffect(() => {
   .catch(error => {
     setState({ ...state, loading: false, error })
   });
-},[]);
-  return state;
+},[trigger]);
+  return {...state, refetch };
 };
 
 export default useAxios;
