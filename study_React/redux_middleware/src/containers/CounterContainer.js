@@ -1,10 +1,10 @@
-import React from 'react';
-import Counter from '../components/Counter';
-import { useSelector, useDispatch } from 'react-redux';
-import { increaseAsync, decreaseAsync } from '../modules/counter';
+import React from "react";
+import Counter from "../components/Counter";
+import { useSelector, useDispatch } from "react-redux";
+import { increaseAsync, decreaseAsync } from "../modules/counter";
 
 function CounterContainer() {
-  const number = useSelector(state => state.counter);
+  const number = useSelector((state) => state.counter); // 조회
   const dispatch = useDispatch();
 
   const onIncrease = () => {
