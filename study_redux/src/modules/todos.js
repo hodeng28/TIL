@@ -25,7 +25,7 @@ const initialState = [
   /*
   {
     id: 1,
-    text: '예시',
+    text: '이런식으로..',
     done: false    
   }
   */

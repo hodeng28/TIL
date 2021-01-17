@@ -1,12 +1,10 @@
 import "./App.css";
-import CounterContainer from "./containers/CounterContainer";
 import TodosContainer from "./containers/TodosContainer";
 
 function App() {
   return (
     <div>
-      <CounterContainer />
-      <hr />
+      <h1>Todo List</h1>
       <TodosContainer />
     </div>
   );
