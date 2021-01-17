@@ -1,7 +1,8 @@
 // 액션 타입 생성
 
-const ADD_TODO = "todos/ADD_TODO";
-const TOGGLE_TODO = "todos/TOGGLE_TODO";
+const ADD_TODO = "ADD_TODO";
+const TOGGLE_TODO = "TOGGLE_TODO";
+const REMOVE_TODO = "REMOVE_TODO";
 
 // 액션 생성함수 생성
 
@@ -12,6 +13,11 @@ export const addTodo = (text) => ({
     id: nextId++,
     text,
   },
+});
+
+export const removeTodo = (id) => ({
+  type: REMOVE_TODO,
+  id,
 });
 
 export const toggleTodo = (id) => ({
@@ -37,6 +43,8 @@ export default function todo(state = initialState, action) {
   switch (action.type) {
     case ADD_TODO:
       return state.concat(action.todo);
+    case REMOVE_TODO:
+      return state.filter((remove) => remove.id !== action.id);
     case TOGGLE_TODO:
       return state.map((todo) =>
         todo.id === action.id ? { ...todo, done: !todo.done } : todo

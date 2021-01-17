@@ -2,16 +2,24 @@ import React, { useCallback } from "react";
 // import { connect } from "react-redux";
 import { useDispatch, useSelector } from "react-redux";
 import Todos from "../components/Todos";
-import { addTodo, toggleTodo } from "../modules/todos";
+import { addTodo, removeTodo, toggleTodo } from "../modules/todos";
 
 function TodosContainer() {
   const todos = useSelector((state) => state.todos);
   const dispatch = useDispatch();
 
   const onCreate = useCallback((text) => dispatch(addTodo(text)), [dispatch]);
+  const onDelete = useCallback((id) => dispatch(removeTodo(id)), [dispatch]);
   const onToggle = useCallback((id) => dispatch(toggleTodo(id)), [dispatch]);
 
-  return <Todos todos={todos} onCreate={onCreate} onToggle={onToggle} />;
+  return (
+    <Todos
+      todos={todos}
+      onCreate={onCreate}
+      onToggle={onToggle}
+      onDelete={onDelete}
+    />
+  );
 }
 
 export default TodosContainer;
