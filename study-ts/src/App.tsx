@@ -1,4 +1,5 @@
 import React from 'react';
+import { ExProvider } from './ContextEx';
 import ReducerEx from './ReducerEx';
 // import Counter from './Counter';
 // import MyForm from './MyForm';
@@ -12,7 +13,12 @@ const App: React.FC =() => {
   //     <MyForm onSubmit={onSubmit} />
   // );
 
-  return <ReducerEx />
+  return (
+    <ExProvider>
+      <ReducerEx />
+    </ExProvider>
+  )
+  
 }
 
 export default App;
