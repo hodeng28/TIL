@@ -1,0 +1,40 @@
+.todoInsert {
+  display: flex;
+  background-color: #495057;
+
+  input {
+    flex: 1;
+    padding: .5rem;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: #ffffff;
+    background: none;
+    border: none;
+    outline: none;
+
+    &::placeholder {
+      color: #dee2e6;
+    }
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    background-color: #868e96;
+    line-height: 44px;
+    cursor: pointer;
+    transition: 0.1s background-color ease-in;
+
+    &:hover {
+      background: #adb5bd;
+    }
+  }
+
+
+}
