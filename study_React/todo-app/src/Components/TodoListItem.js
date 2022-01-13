@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   MdCheckBoxOutlineBlank,
-  MdCheckCircleOutline,
+  MdRemoveCircleOutline,
   MdCheckBox,
 } from 'react-icons/md';
 import cn from 'classnames';
@@ -18,7 +18,7 @@ const TodoListItem = ({ todo }) => {
           <div className="text">{text}</div>
         </div>
         <div className="remove">
-          <MdCheckCircleOutline />
+          <MdRemoveCircleOutline />
         </div>
       </div>
     </>
