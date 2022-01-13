@@ -1,4 +1,5 @@
 import React from 'react';
+import { MdAdd } from 'react-icons/md';
 import './style/TodoInsert.scss';
 
 const TodoInsert = () => {
@@ -6,7 +7,9 @@ const TodoInsert = () => {
     <>
       <form className="todoInsert">
         <input placeholder="what to do ?" />
-        <button type="submit">x</button>
+        <button type="submit">
+          <MdAdd />
+        </button>
       </form>
     </>
   );

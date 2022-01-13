@@ -1,5 +1,6 @@
 import React from 'react';
 import TodoInsert from './Components/TodoInsert';
+import TodoList from './Components/TodoList';
 import TodoTemplate from './Components/TodoTemplate';
 
 const App = () => {
@@ -7,6 +8,7 @@ const App = () => {
     <>
       <TodoTemplate>
         <TodoInsert />
+        <TodoList />
       </TodoTemplate>
     </>
   );
