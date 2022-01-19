@@ -1,6 +1,7 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
-const cateogories = [
+const categories = [
   {
     name: 'all',
     text: '전체보기',
@@ -37,49 +38,47 @@ const CategoryBlock = styled.div`
   margin: 0 auto;
   padding: 1rem;
 
-  @media screnn and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     width: 100%;
     overflow-x: auto;
   }
 `;
 
-const Cateogory = styled.div`
+const Category = styled(NavLink)`
   padding-bottom: 0.25rem;
   font-size: 1.25rem;
-  color: inherit;
 
   &:hover {
     color: #495057;
   }
 
-  ${(props) =>
-    props.active &&
-    css`
-      color: #22b8cf;
-      border-bottom: 2px solid #22b8cf;
-      &:hover {
-        color: #3bc9db;
-      }
-    `}
-
+  &.active {
+    border-bottom: 2px solid #22b8cf;
+    &:hover {
+      color: #3bc9db;
+    }
+  }
   & + & {
     margin-left: 1rem;
   }
 `;
-const NewsCateogory = ({ onSelect, category }) => {
+const NewsCategory = () => {
   return (
     <CategoryBlock>
-      {cateogories.map((e) => (
-        <Cateogory
+      {categories.map((e) => (
+        <Category
           key={e.name}
-          active={category === e.name}
-          onClick={() => onSelect(e.name)}
+          style={({ isActive }) => ({
+            color: isActive ? '#22b8cf' : 'inherit',
+          })}
+          exact={e.name === 'all'}
+          to={e.name === 'all' ? '/' : `/${e.name}`}
         >
           {e.text}
-        </Cateogory>
+        </Category>
       ))}
     </CategoryBlock>
   );
 };
 
-export default NewsCateogory;
+export default NewsCategory;
