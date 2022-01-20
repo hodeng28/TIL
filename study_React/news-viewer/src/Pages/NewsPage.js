@@ -3,11 +3,11 @@ import NewsList from '../Components/NewsList';
 import { useParams } from 'react-router-dom';
 
 const NewsPage = () => {
-  const { category } = useParams();
+  const { categoryName } = useParams();
   return (
     <>
       <NewsCategory />
-      <NewsList category={category} />
+      <NewsList category={categoryName || 'all'} />
     </>
   );
 };

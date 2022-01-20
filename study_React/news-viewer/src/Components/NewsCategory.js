@@ -47,12 +47,11 @@ const CategoryBlock = styled.div`
 const Category = styled(NavLink)`
   padding-bottom: 0.25rem;
   font-size: 1.25rem;
-
-  &:hover {
-    color: #495057;
-  }
+  text-decoration: none;
+  color: #495057;
 
   &.active {
+    color: #3bc9db;
     border-bottom: 2px solid #22b8cf;
     &:hover {
       color: #3bc9db;
@@ -68,10 +67,7 @@ const NewsCategory = () => {
       {categories.map((e) => (
         <Category
           key={e.name}
-          style={({ isActive }) => ({
-            color: isActive ? '#22b8cf' : 'inherit',
-          })}
-          exact={e.name === 'all'}
+          // exact={e.name === '/'}
           to={e.name === 'all' ? '/' : `/${e.name}`}
         >
           {e.text}

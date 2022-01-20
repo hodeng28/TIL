@@ -1,14 +1,7 @@
-import { Route, Routes, BrowserRouter } from 'react-router-dom';
-import NewsPage from './Pages/NewsPage';
+import MainRouter from './Router/MainRouter';
 
 const App = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/:category?" component={NewsPage} />
-      </Routes>
-    </BrowserRouter>
-  );
+  return <MainRouter />;
 };
 
 export default App;
