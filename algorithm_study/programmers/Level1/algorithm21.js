@@ -9,7 +9,6 @@ function solution(numbers) {
       answer += i;
     }
   }
-
   return answer;
 }
 
