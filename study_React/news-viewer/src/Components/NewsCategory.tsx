@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import React from 'react';
 
-const categories = [
+interface News {
+  name: string,
+  text: string
+}
+
+const categories: News[] = [
   {
     name: 'all',
     text: '전체보기',

@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 
 const NewsItemBlock = styled.div`
@@ -33,7 +34,12 @@ const NewsItemBlock = styled.div`
   }
 `;
 
-const NewsItem = ({ article }) => {
+export interface IProps {
+  article: {title: string, description: string, url: string, urlToImage: string}
+}
+
+
+const NewsItem = ({article: IProps['acticle']}):JSX.Element => {
   const { title, description, url, urlToImage } = article;
 
   return (

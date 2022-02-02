@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import NewsItem from './NewItem';
 import axios from 'axios';
+import React from 'react';
 
 const NewsListBlock = styled.div`
   width: 768px;
@@ -15,8 +16,10 @@ const NewsListBlock = styled.div`
   }
 `;
 
+
+
 const NewsList = ({ category }) => {
-  const [articles, setArticles] = useState(null);
+  const [articles, setArticles] = useState<IProps['article']>(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -47,7 +50,7 @@ const NewsList = ({ category }) => {
   return (
     <NewsListBlock>
       {articles.map((article) => (
-        <NewsItem key={article.url} article={article} />
+        <NewsItem key={article.url} {...article} />
       ))}
     </NewsListBlock>
   );
