@@ -6,30 +6,29 @@
   <title>Debounce</title>
 </head>
 <body>
-  <button class="click-btn">Click Btn</button>
-    <div>
-      <span class="normal-count">0</span>
-      <span class="debounce-count">0</span>
-    </div>
+  <div>
+    <input type="text">
+    <div class="input-count"></div>
+  </div>
   <script>
-    const clickBtn = document.querySelector('.click-btn');
-    const normalCount = document.querySelector('.normal-count');
-    const debounceCount = document.querySelector('.debounce-count');
+    const inputBox = document.querySelector('input')
+    const debounceCount = document.querySelector('.input-count');
 
     const debounce = (callback, delay) => {
       let timer;
-      return e => {
+      return event => {
         if (timer) clearTimeout(timer);
-        timer = setTimeout(callback, delay, e);
+        timer = setTimeout(callback, delay, event);
       };
     };
 
-    clickBtn.addEventListener('click', () => {
-      normalCount.textContent = +normalCount.textContent + 1;
-    });
-    clickBtn.addEventListener('click', debounce(() => {
-      debounceCount.textContent = +debounceCount.textContent + 1;
-    }, 500));
+    // debounce function이 반환하는 클로저가 이벤트 핸들러로 등록
+    // delay(300ms) 보다 짧은간격으로 event가 입력되면 debounce function의 callback은 호출되지 않다가, 
+    // delay(300ms) 동안 input event가 더 이상 발생하지 않으면 한번만 호출된다.
+    inputBox.oninput = debounce(e => {
+      debounceCount.textContent = e.target.value;
+    }, 300);
+    
   </script>
 </body>
 </html>
