@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+  <body>
+      <style>
+        input {
+          width: 50px;
+          height: 50px;
+          font-size: 40px;
+          text-align: center;
+        }
+      </style>
+      <input class="input">
+      <input class="input">
+      <input class="input">
+      <input class="input">
+      <input class="input">
+      <button>제출</button>
+
+      <script>
+          let answer = 'abcde';
+
+          const btn = document.querySelector('button');
+
+          btn.addEventListener('click', () => {
+
+            let submit = document.querySelectorAll('.input');
+
+            for (let i = 0; i < 5; i++) {
+              if (submit[i].value === answer[i]) {
+                  submit[i].style.background = 'green';
+              } else if (answer.includes(submit[i].value)) {
+                  submit[i].style.background = 'skyblue';
+              } else {
+                  submit[i].style.background = 'gray';
+              }
+            }; 
+          });
+      </script>
+  </body>
+</html>
