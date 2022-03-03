@@ -13,7 +13,7 @@ const MainRouter = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/super-heroes">Traditional Super Heroes</Link>
+              <Link to="/super-heroes">Super Heroes</Link>
             </li>
             <li>
               <Link to="/query-super-heroes">RQ Super Heroes</Link>
