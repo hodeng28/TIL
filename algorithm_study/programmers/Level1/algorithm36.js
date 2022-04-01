@@ -12,6 +12,7 @@ function solution(nums) {
     // if (answer.length >= maxChoice / 2) {
     //   return answer.length;
     // }
+
     if (!answer.includes(nums[i]) && answer.length < maxChoice / 2) {
       answer.push(nums[i]);
     }
