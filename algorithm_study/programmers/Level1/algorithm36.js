@@ -6,11 +6,14 @@ function solution(nums) {
   const maxChoice = nums.length;
 
   for (let i = 0; i < maxChoice; i++) {
-    if (answer.indexOf(nums[i]) === -1) {
+    // if (answer.indexOf(nums[i]) === -1) {
+    //   answer.push(nums[i]);
+    // }
+    // if (answer.length >= maxChoice / 2) {
+    //   return answer.length;
+    // }
+    if (!answer.includes(nums[i]) && answer.length < maxChoice / 2) {
       answer.push(nums[i]);
-    }
-    if (answer.length >= maxChoice / 2) {
-      return answer.length;
     }
   }
   return answer.length;
