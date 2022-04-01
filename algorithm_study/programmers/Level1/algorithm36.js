@@ -1,5 +1,4 @@
-// 중복되는 수 제거
-//
+// 프로그래머스 폰켓몬 문제
 
 function solution(nums) {
   let answer = [];
