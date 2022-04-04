@@ -13,6 +13,13 @@ function solution(a, b) {
     }
   }
   return sum;
+
+  // 다른 사람들의 답..  for문을 한번만 돌려서 더욱 간결
+
+  // for(let i = Math.min(a, b); i <= Math.max(a, b); i++) {
+  //   sum += i;
+  // }
+  // return sum;
 }
 
 console.log(solution(3, 5));
