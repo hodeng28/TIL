@@ -7,16 +7,23 @@
   }
 
   .login-input-wrap {
-    height: 18rem;
+    margin-top: 1rem;
+    padding: 2rem 0;
     border: 2px solid black;
+    text-align: center;
 
     input {
       width: 20rem;
       height: 3rem;
+      margin-bottom: 1rem;
+      padding-left: .5rem;
+    }
 
-      & + & {
-        margin-bottom: 3rem;
-      }
+    button {
+      width: 20rem;
+      padding: 1rem 0;
+      background-color: #00b086;
+      color: #ffffff;
     }
   }
 }
