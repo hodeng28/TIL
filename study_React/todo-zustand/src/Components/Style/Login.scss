@@ -1,0 +1,22 @@
+.login-wrap {
+  width: 25rem;
+  margin: 5rem auto;
+
+  h2 {
+    text-align: center;
+  }
+
+  .login-input-wrap {
+    height: 18rem;
+    border: 2px solid black;
+
+    input {
+      width: 20rem;
+      height: 3rem;
+
+      & + & {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}

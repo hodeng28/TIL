@@ -1,18 +1,14 @@
-import { useState } from 'react'
-import './App.css'
+import './common.scss'
+import Login from './Components/Login'
+import Header from './Components/Header'
 
 const App = () => {
-  const [count, setCount] = useState(0)
 
-  const onClick = () => {
-    setCount(count => count + 1);
-  }
   return (
-    <div>
-      <button type="button" onClick={onClick}>
-        count is: {count}
-      </button>
-    </div>
+    <>
+      <Header />
+      <Login />
+    </>
   )
 }
 
