@@ -1,6 +1,13 @@
+import { useEffect, useRef } from 'react';
 import './Style/Login.scss'
 
 const Login = ({ userState, name, handleInputId ,handleInputPw, handleLogin, handleUserAccount }) => {
+
+  const loginRef = useRef();
+
+  useEffect(() => {
+    loginRef.current.focus();
+  }, [])
 
   return (
     <>
@@ -13,6 +20,7 @@ const Login = ({ userState, name, handleInputId ,handleInputPw, handleLogin, han
             defaultValue={userState.id}
             onChange={handleUserAccount}
             placeholder="아이디를 입력해주세요."
+            ref={loginRef}
           />
           <input
              type="password"
