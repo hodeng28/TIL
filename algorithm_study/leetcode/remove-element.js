@@ -1,15 +1,16 @@
-/**
+/** https://leetcode.com/problems/remove-element/
  * @param {number[]} nums
  * @param {number} val
  * @return {number}
  */
 var removeElement = function (nums, val) {
-  let i = 0;
+  let result = 0;
 
-  for (let j = 0; j < nums.length; j++) {
-    if (nums[j] === val) continue;
-    nums[i] = nums[j];
-    i++;
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] !== val) {
+      nums[result++] = nums[i];
+    }
   }
-  return i;
+
+  return result;
 };
