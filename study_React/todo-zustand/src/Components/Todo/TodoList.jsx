@@ -1,14 +1,19 @@
 import './Style/TodoList.scss'
 import TodoListItem from './TodoListItem';
 
-const TodoList = () => {
+const TodoList = ({ todos, removeTodo, handleCheckBox }) => {
 
   return (
     <>
       <ul className="todo-list">
-          <TodoListItem />
-          <TodoListItem />
-          <TodoListItem />
+          {todos.map(todo => (
+            <TodoListItem  
+              key={todo.id}  
+              todo={todo}
+              removeTodo={removeTodo}
+              handleCheckBox={handleCheckBox}
+            />
+          ))}
       </ul>
       
     </>
