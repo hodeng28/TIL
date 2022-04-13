@@ -1,0 +1,48 @@
+.todo-listItem {
+    display: flex;
+    align-items: center;
+
+    &:nth-child(even) {
+        background-color: #f8f9fa;
+    }
+
+    .check-box, .remove {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    .check-box {
+        flex: 1;
+
+        svg {
+            font-size: 1.5rem;
+        }
+
+        span {
+            flex: 1;
+            margin-left: .5rem;
+        }
+
+        &.checked {
+            svg {
+                color: #22b8cf;
+            }
+            span {
+                color: #adb5bd;
+                text-decoration: line-through;
+            }
+        }
+    }
+
+    .remove {
+        color: #ff6b6b;
+
+        &:hover {
+            color: #ff8787;
+        }
+
+        & + & {  // 엘리먼트의 사이
+            border-top: 1px solid #dee2e6;
+        }
+    }
+}

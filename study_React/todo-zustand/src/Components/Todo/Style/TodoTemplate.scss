@@ -1,0 +1,18 @@
+.todo-template { 
+  width: 32rem;
+  margin:  6rem auto 0;
+  border-radius: .25rem;
+  overflow: hidden;
+
+  h3 {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    background-color: #00b086;
+  }
+  div {
+    background-color: #ffffff;
+  }
+}
