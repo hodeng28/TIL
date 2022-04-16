@@ -7,11 +7,9 @@ function solution(phone_number) {
   let number = phone_number.length;
 
   for (let i = 0; i < number; i++) {
-    if (i < number - 4) {
-      answer = answer + "*";
-    } else {
-      answer = answer + phone_number[i];
-    }
+    i < number - 4
+      ? (answer = answer + "*")
+      : (answer = answer + phone_number[i]);
   }
   return answer;
 }

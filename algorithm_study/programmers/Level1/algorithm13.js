@@ -10,12 +10,12 @@ function isHarshad(n) {
   let str = n + "";
   let sum = 0;
   for (let i = 0; i < str.length; i++) {
-    sum = sum + Number(str[i]);
+    sum += Number(str[i]);
   }
-
   return n % sum === 0 ? true : false;
 }
 console.log(isHarshad(10));
 console.log(isHarshad(12));
+console.log(isHarshad(18));
 console.log(isHarshad(11));
 console.log(isHarshad(13));
