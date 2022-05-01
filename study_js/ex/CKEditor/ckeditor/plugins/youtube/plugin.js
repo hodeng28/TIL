@@ -49,22 +49,23 @@
         label: editor.lang.youtube.button,
         toolbar: "insert",
         command: "youtube",
-        icon: this.path + "images/icon.png",
+        icon: this.path + "images/youtube_icon.png",
       });
 
       CKEDITOR.dialog.add("youtube", function (instance) {
-        var video,
-          disabled = editor.config.youtube_disabled_fields || [];
+        var video;
+        //   disabled = editor.config.youtube_disabled_fields || [];
 
         function handleLinkChange(el, api) {
           var video = ytVidId(el.getValue());
           var time = ytVidTime(el.getValue());
 
-          if (el.getValue().length > 0) {
-            el.getDialog().getContentElement("youtubePlugin", "txtEmbed");
-          } else if (!disabled.length || !disabled.includes("txtEmbed")) {
-            el.getDialog().getContentElement("youtubePlugin", "txtEmbed");
-          }
+          //   if (el.getValue().length > 0) {
+          //     el.getDialog().getContentElement("youtubePlugin", "txtEmbed");
+          //   } else
+          //    if (!disabled.length || !disabled.includes("txtEmbed")) {
+          //     el.getDialog().getContentElement("youtubePlugin", "txtEmbed");
+          //   }
 
           if (video && time) {
             var seconds = timeParamToSeconds(time);
@@ -74,7 +75,6 @@
               .setValue(hms);
           }
         }
-
         return {
           title: editor.lang.youtube.title,
           minWidth: 320,
@@ -207,6 +207,11 @@
               paramAutoplay = "";
             var width = this.getValueOf("youtubePlugin", "txtWidth");
             var height = this.getValueOf("youtubePlugin", "txtHeight");
+            
+            var youtubeWidth = window.innerWidth <= "640" ? "100%" : width;
+            var youtubeHeight = window.innerWidth <= "640" ? "100%" : height;
+
+
             url += "www.youtube.com/";
 
             url += "embed/" + video;
@@ -223,17 +228,18 @@
               url = url + "?" + params.join("&");
             }
 
+
             content +=
-              "<iframe " +
+              "<div class='video-container' style='position:relative;max-width:640px;padding-bottom: min(56.25%, 360px);padding-top: 30px;height: 0;overflow: hidden;'><iframe " +
               (paramAutoplay ? 'allow="' + paramAutoplay + ';" ' : "") +
               'width="' +
-              width +
+              youtubeWidth +
               '" height="' +
-              height +
+              youtubeHeight +
               '" src="' +
               url +
               '" ' +
-              'frameborder="0" allowfullscreen></iframe>';
+              'frameborder="0" allowfullscreen style="position:absolute; top:0;left:0;"></iframe></div>';
 
             var element = CKEDITOR.dom.element.createFromHtml(content);
             var instance = this.getParentEditor();
