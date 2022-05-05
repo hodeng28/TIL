@@ -54,24 +54,16 @@
 
       CKEDITOR.dialog.add("youtube", function (instance) {
         var video;
-        //   disabled = editor.config.youtube_disabled_fields || [];
 
         function handleLinkChange(el, api) {
           var video = ytVidId(el.getValue());
           var time = ytVidTime(el.getValue());
 
-          //   if (el.getValue().length > 0) {
-          //     el.getDialog().getContentElement("youtubePlugin", "txtEmbed");
-          //   } else
-          //    if (!disabled.length || !disabled.includes("txtEmbed")) {
-          //     el.getDialog().getContentElement("youtubePlugin", "txtEmbed");
-          //   }
-
           if (video && time) {
             var seconds = timeParamToSeconds(time);
             var hms = secondsToHms(seconds);
             el.getDialog()
-              .getContentElement("youtubePlugin", "txtStartAt")
+              .getContentElement("youtubePlugin")
               .setValue(hms);
           }
         }
@@ -86,7 +78,7 @@
               elements: [
                 {
                   type: "hbox",
-                  widths: ["50%", "25%", "25%"],
+                  widths: ["85%", "15%"],
                   children: [
                     // 유튜브 주소 입력창
                     {
@@ -143,56 +135,6 @@
                         }
                       },
                     },
-                    // 유튜브 height 입력창
-                    {
-                      type: "text",
-                      id: "txtHeight",
-                      width: "60px",
-                      label: editor.lang.youtube.txtHeight,
-                      default:
-                        editor.config.youtube_height != null
-                          ? editor.config.youtube_height
-                          : "360",
-                      validate: function () {
-                        if (this.getValue()) {
-                          var height = Number(this.getValue());
-
-                          if (isNaN(height)) {
-                            alert(editor.lang.youtube.invalidHeight);
-                            return false;
-                          }
-                        } else {
-                          alert(editor.lang.youtube.noHeight);
-                          return false;
-                        }
-                      },
-                    },
-                  ],
-                },
-                {
-                  type: "hbox",
-                  widths: ["55%", "45%"],
-                  children: [
-                    {
-                      id: "txtStartAt",
-                      type: "text",
-                      label: editor.lang.youtube.txtStartAt,
-                      style: "display: none",
-                      validate: function () {
-                        if (this.getValue()) {
-                          var str = this.getValue();
-
-                          if (
-                            !/^(?:(?:([01]?\d|2[0-3]):)?([0-5]?\d):)?([0-5]?\d)$/i.test(
-                              str
-                            )
-                          ) {
-                            alert(editor.lang.youtube.invalidTime);
-                            return false;
-                          }
-                        }
-                      },
-                    },
                   ],
                 },
               ],
@@ -200,27 +142,20 @@
           ],
           onOk: function () {
             var content = "";
-
             var url = "https://",
               params = [],
               startSecs,
               paramAutoplay = "";
             var width = this.getValueOf("youtubePlugin", "txtWidth");
-            var height = this.getValueOf("youtubePlugin", "txtHeight");
-            
-            var youtubeWidth = window.innerWidth <= "640" ? "100%" : width;
-            var youtubeHeight = window.innerWidth <= "640" ? "100%" : height;
-
+            var height = width * 9 / 16;
 
             url += "www.youtube.com/";
-
             url += "embed/" + video;
 
-            startSecs = this.getValueOf("youtubePlugin", "txtStartAt");
+            startSecs = this.getValueOf("youtubePlugin");
 
             if (startSecs) {
               var seconds = hmsToSeconds(startSecs);
-
               params.push("start=" + seconds);
             }
 
@@ -228,18 +163,17 @@
               url = url + "?" + params.join("&");
             }
 
-
             content +=
-              "<div class='video-container' style='position:relative;max-width:640px;padding-bottom: min(56.25%, 360px);padding-top: 30px;height: 0;overflow: hidden;'><iframe " +
+              "<iframe " +
               (paramAutoplay ? 'allow="' + paramAutoplay + ';" ' : "") +
               'width="' +
-              youtubeWidth +
+              width +
               '" height="' +
-              youtubeHeight +
+              height +
               '" src="' +
               url +
               '" ' +
-              'frameborder="0" allowfullscreen style="position:absolute; top:0;left:0;"></iframe></div>';
+              'frameborder="0" allowfullscreen style="max-width: 100%"></iframe>';
 
             var element = CKEDITOR.dom.element.createFromHtml(content);
             var instance = this.getParentEditor();
