@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 400px;
+            height: 400px;
+            margin:  0 auto;
+            background-color: blue;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loader {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border-top: 8px solid rgba(255, 255, 255, 1);
+            border-left: 8px solid rgba(255, 255, 255, 1);
+            border-right: 8px solid rgba(255, 255, 255, 0);
+
+            animation: spin .575s infinite linear;
+            
+        }
+    </style>
+    <div class="container">
+        <div class="loader"></div>
+    </div>
+    
+    
+</body>
+</html>
