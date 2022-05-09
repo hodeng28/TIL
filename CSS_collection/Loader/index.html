@@ -14,8 +14,10 @@
             width: 400px;
             height: 400px;
             margin:  0 auto;
-            background-color: blue;
+            background-color: paleturquoise;
         }
+
+        /* spin */
         @keyframes spin {
             to { transform: rotate(360deg); }
         }
@@ -29,11 +31,57 @@
             border-right: 8px solid rgba(255, 255, 255, 0);
 
             animation: spin .575s infinite linear;
+        }
+
+        /* clock */
+        @keyframes tick {
+            to { transform: rotate(359deg);}
+        }
+        .loader2 {
+            position: relative;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            border: 2px solid #f9f9f9;
+        }
+
+        .loader2::after {
+            display: block;
+            content: "";
+            position: absolute;
+            left: 30px;
+            bottom: 29px;
+            width: 1px;
+            height: 24px;
+            background-color: #f9f9f9;
             
+            animation: tick 1s infinite linear;
+            transform-origin: 0% 100%;
+        }
+
+        @keyframes glass {
+            0% {
+                box-shadow: 0 0 #ed3b65 inset;
+            }
+            100% {
+                box-shadow: 0 -70px #ed3b65 inset;
+            }
+        }
+
+        .loader3 {
+            position: relative;
+            width: 32px;
+            height: 72px;
+            border: 2px solid #fff;
+
+            animation: glass 1.5s linear infinite alternate;
+            transform: perspective(140px) rotateX(-45deg);
         }
     </style>
     <div class="container">
         <div class="loader"></div>
+        <div class="loader2"></div>
+        <div class="loader3"></div>
     </div>
     
     
