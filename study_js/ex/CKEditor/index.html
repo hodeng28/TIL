@@ -3,18 +3,24 @@
    <head>
         <meta charset="utf-8">
         <title>CKEditor</title>
-        <script src="ckeditor/ckeditor.js"></script>
+        <script src="./ckeditor5-34.0.0/build/ckeditor.js"></script>
     </head>
     <body>
         <style>
                 
         </style>
         <form>
-                <textarea name="editor1" id="editor1" rows="100" cols="800">
-                        This is my textarea to be replaced with CKEditor 4.
-                </textarea>
+                <textarea name="editor1" id="editor1" rows="100" cols="800"></textarea>
                 <script>
-                        CKEDITOR.replace( 'editor1' );
+                        ClassicEditor
+                                .create( document.querySelector( '#editor1' ), {
+                                        
+                                } )
+                                .catch( error => {
+                                console.error( error );
+                        } );
+
+
                 </script>
         </form>
     </body>
