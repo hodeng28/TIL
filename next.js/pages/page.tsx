@@ -1,9 +1,8 @@
-import type { NextPage } from "next";
 import styles from "../styles/Home.module.css";
 import { Stack, Button } from "@mui/material";
 import NavBar from "./NavBar";
 
-const Home: NextPage = () => {
+const Page = () => {
   return (
     <div className={styles.container}>
       <NavBar />
@@ -18,4 +17,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Page;
