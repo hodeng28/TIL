@@ -1,5 +1,7 @@
 import Seo from "./Components/Seo";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 interface IMovieProps {
   id: number;
@@ -13,13 +15,40 @@ interface IMovieProps {
 }
 
 const Home = ({ results }: InferGetServerSidePropsType<GetServerSideProps>) => {
+  const router = useRouter();
+  const movieDatas = ({ id, title }: { id: number; title: string }) => {
+    router.push({
+      pathname: `/movies/${id}`,
+      query: {
+        title,
+      },
+    });
+  };
+
   return (
     <div className="container">
       <Seo title="Home" />
       {results?.map((movie: IMovieProps) => (
-        <div key={movie.id} className="movie">
+        <div
+          key={movie.id}
+          onClick={() =>
+            movieDatas({ id: movie.id, title: movie.original_title })
+          }
+          className="movie"
+        >
           <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
           <h4>{movie.original_title}</h4>
+          <Link
+            href={{
+              pathname: `/movies/${movie.id}`,
+              query: {
+                title: movie.original_title,
+              },
+            }}
+            as={`/movies/${movie.id}`}
+          >
+            <a>{movie.original_title}</a>
+          </Link>
         </div>
       ))}
       <style jsx>{`
