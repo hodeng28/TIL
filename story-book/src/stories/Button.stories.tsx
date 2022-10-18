@@ -16,19 +16,21 @@ const Template: ComponentStory<typeof StyledButton> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {
-  primary: true,
+  color: "warning",
   label: "Button",
   variant: "text",
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
+  color: "primary",
   label: "Button",
   variant: "contained",
 };
 
 export const Large = Template.bind({});
 Large.args = {
+  color: "success",
   size: "large",
   label: "Button",
   variant: "contained",
@@ -36,6 +38,7 @@ Large.args = {
 
 export const Small = Template.bind({});
 Small.args = {
+  color: "inherit",
   size: "small",
   label: "hi",
   variant: "outlined",

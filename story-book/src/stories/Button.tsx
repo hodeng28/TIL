@@ -3,8 +3,14 @@ import { Button } from "@mui/material";
 import "./button.css";
 
 interface ButtonProps {
-  primary?: boolean;
-  backgroundColor?: string;
+  color?:
+    | "inherit"
+    | "primary"
+    | "secondary"
+    | "success"
+    | "error"
+    | "info"
+    | "warning";
   variant?: "text" | "contained" | "outlined";
   size?: "small" | "medium" | "large";
   label: string;
@@ -12,14 +18,13 @@ interface ButtonProps {
 }
 
 export const StyledButton = ({
-  primary = false,
+  color,
   variant,
-  backgroundColor,
   label,
   ...props
 }: ButtonProps) => {
   return (
-    <Button type="button" variant={variant} {...props}>
+    <Button type="button" color={color} variant={variant} {...props}>
       {label}
     </Button>
   );
