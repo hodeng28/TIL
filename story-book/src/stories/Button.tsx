@@ -18,11 +18,8 @@ export const StyledButton = ({
   label,
   ...props
 }: ButtonProps) => {
-  // const mode = primary
-  //   ? "storybook-button--primary"
-  //   : "storybook-button--secondary";
   return (
-    <Button type="button" variant="contained" {...props}>
+    <Button type="button" variant={variant} {...props}>
       {label}
     </Button>
   );
