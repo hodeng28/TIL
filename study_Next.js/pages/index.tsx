@@ -2,6 +2,7 @@ import Seo from "./Components/Seo";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 interface IMovieProps {
   id: number;
@@ -36,7 +37,7 @@ const Home = ({ results }: InferGetServerSidePropsType<GetServerSideProps>) => {
           }
           className="movie"
         >
-          <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
+          <Image src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
           <h4>{movie.original_title}</h4>
           <Link
             href={{
@@ -51,7 +52,7 @@ const Home = ({ results }: InferGetServerSidePropsType<GetServerSideProps>) => {
           </Link>
         </div>
       ))}
-      <style jsx>{`
+      <style>{`
         .container {
           display: grid;
           grid-template-columns: 1fr 1fr;

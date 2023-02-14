@@ -13,7 +13,7 @@ const NavBar = () => {
       <Link href="/about">
         <a className={router.pathname === "/about" ? "active" : ""}>page</a>
       </Link>
-      <style jsx>
+      <style>
         {`
           a {
             font-size: 30px;
