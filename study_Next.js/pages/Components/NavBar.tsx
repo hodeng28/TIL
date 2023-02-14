@@ -13,7 +13,7 @@ const NavBar = () => {
       <Link href="/about">
         <a className={router.pathname === "/about" ? "active" : ""}>page</a>
       </Link>
-      <style>
+      {/* <style>
         {`
           a {
             font-size: 30px;
@@ -23,7 +23,7 @@ const NavBar = () => {
             color: blue;
           }
         `}
-      </style>
+      </style> */}
     </nav>
   );
 };

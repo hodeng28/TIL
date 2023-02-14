@@ -37,7 +37,12 @@ const Home = ({ results }: InferGetServerSidePropsType<GetServerSideProps>) => {
           }
           className="movie"
         >
-          <Image src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
+          <Image
+            alt="이미지"
+            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+            width={40}
+            height={40}
+          />
           <h4>{movie.original_title}</h4>
           <Link
             href={{
@@ -52,7 +57,7 @@ const Home = ({ results }: InferGetServerSidePropsType<GetServerSideProps>) => {
           </Link>
         </div>
       ))}
-      <style>{`
+      {/* <style>{`
         .container {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -75,7 +80,7 @@ const Home = ({ results }: InferGetServerSidePropsType<GetServerSideProps>) => {
           font-size: 18px;
           text-align: center;
         }
-      `}</style>
+      `}</style> */}
     </div>
   );
 };
