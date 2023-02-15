@@ -6,22 +6,24 @@ import Image from "next/image";
 
 interface IMovieProps {
   id: number;
-  backdrop_path: string;
-  original_title: string;
+  backdrop_path?: string;
+  original_title?: string;
   overview: string;
   poster_path: string;
-  title: string;
-  vote_average: number;
-  genre_ids: [number];
+  title?: string;
+  vote_average?: number;
+  genre_ids?: [number];
 }
 
 const Home = ({ results }: InferGetServerSidePropsType<GetServerSideProps>) => {
   const router = useRouter();
-  const movieDatas = ({ id, title }: { id: number; title: string }) => {
+  const movieDatas = ({ id, title, overview, poster_path }: IMovieProps) => {
     router.push({
       pathname: `/movies/${id}`,
       query: {
         title,
+        overview,
+        poster_path,
       },
     });
   };
@@ -33,7 +35,12 @@ const Home = ({ results }: InferGetServerSidePropsType<GetServerSideProps>) => {
         <div
           key={movie.id}
           onClick={() =>
-            movieDatas({ id: movie.id, title: movie.original_title })
+            movieDatas({
+              id: movie.id,
+              title: movie.original_title,
+              overview: movie.overview,
+              poster_path: movie.poster_path,
+            })
           }
           className="movie"
         >
@@ -49,6 +56,8 @@ const Home = ({ results }: InferGetServerSidePropsType<GetServerSideProps>) => {
               pathname: `/movies/${movie.id}`,
               query: {
                 title: movie.original_title,
+                overview: movie.overview,
+                poster_path: movie.poster_path,
               },
             }}
             as={`/movies/${movie.id}`}
