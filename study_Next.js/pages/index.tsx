@@ -27,7 +27,7 @@ const Home = ({ results }: InferGetServerSidePropsType<GetServerSideProps>) => {
       },
     });
   };
-  console.log(results);
+
   return (
     <div className="container">
       <Seo title="Home" />
