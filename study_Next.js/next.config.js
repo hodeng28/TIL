@@ -8,6 +8,9 @@ const nextConfig = {
   images: {
     domains: ["image.tmdb.org"],
   },
+  experimental: {
+    scrollRestoration: true,
+  },
 
   async redirects() {
     return [

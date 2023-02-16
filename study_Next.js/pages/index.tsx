@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { Box } from "@mui/material";
 
-interface IMovieProps {
+interface MovieProps {
   id: number;
   backdrop_path?: string;
   original_title?: string;
@@ -17,7 +17,7 @@ interface IMovieProps {
 
 const Home = ({ results }: InferGetServerSidePropsType<GetServerSideProps>) => {
   const router = useRouter();
-  const movieDatas = ({ id, title, overview, poster_path }: IMovieProps) => {
+  const movieDatas = ({ id, title, overview, poster_path }: MovieProps) => {
     router.push({
       pathname: `/movies/${id}`,
       query: {
@@ -30,7 +30,7 @@ const Home = ({ results }: InferGetServerSidePropsType<GetServerSideProps>) => {
 
   return (
     <Box sx={{ padding: "0 16px" }}>
-      {results?.map((movie: IMovieProps) => (
+      {results?.map((movie: MovieProps) => (
         <div
           key={movie.id}
           onClick={() =>

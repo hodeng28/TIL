@@ -7,7 +7,7 @@ interface BackIconButtonProps {
   onClickBack?: () => void;
 }
 
-export const BackIconButton = ({
+const BackIconButton = ({
   iconColor,
   isShadowExist,
   onClickBack,
@@ -30,3 +30,5 @@ export const BackIconButton = ({
     />
   </IconButton>
 );
+
+export default BackIconButton;

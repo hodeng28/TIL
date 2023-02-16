@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { AppBar, Box, Stack, Toolbar, Typography } from "@mui/material";
-import { BackIconButton } from "./Button/BackButton";
+import BackIconButton from "./Button/BackButton";
 
 const NavBar = () => {
   const router = useRouter();
