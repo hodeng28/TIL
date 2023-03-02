@@ -1,20 +1,30 @@
-import { Box, Stack, styled, Typography } from "@mui/material";
+import { Box, List, Stack, styled, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 import { Product } from "../../types";
 
-const ProductItem = ({ title, image, price, category, rating }: Product) => (
-  <ItemBox>
-    <Typography variant="h6">{title}</Typography>
-    <p>{category}</p>
-    <ItemImage src={image} />
-    <span>{price}</span>
-    <span>{rating.count}</span>
-    <span>{rating.rate}</span>
-  </ItemBox>
+const ProductItem = ({
+  id,
+  title,
+  image,
+  price,
+  category,
+  rating,
+}: Product) => (
+  <ItemList>
+    <Link to={`/products/${id}`}>
+      <Typography variant="h6">{title}</Typography>
+      <p>{category}</p>
+      <ItemImage src={image} />
+      <span>{price}</span>
+      <span>{rating.count}</span>
+      <span>{rating.rate}</span>
+    </Link>
+  </ItemList>
 );
 
 export default ProductItem;
 
-const ItemBox = styled(Box)(() => ({
+const ItemList = styled(List)(() => ({
   width: "300px",
 }));
 
