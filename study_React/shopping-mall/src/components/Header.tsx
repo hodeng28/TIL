@@ -1,17 +1,37 @@
+import {
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+  styled,
+} from "@mui/material";
 import { Link } from "react-router-dom";
 
-const Header = () => (
-  <nav>
-    <li>
-      <Link to="/">홈</Link>
-    </li>
-    <li>
-      <Link to="/products">상품목록</Link>
-    </li>
-    <li>
-      <Link to="/cart">장바구니</Link>
-    </li>
-  </nav>
-);
+const Header = () => {
+  const navItems = [
+    { pathname: "/", title: "홈" },
+    { pathname: "/products", title: "상품목록" },
+    { pathname: "/cart", title: "장바구니" },
+  ];
+
+  return (
+    <NavList>
+      {navItems.map((item) => (
+        <Link to={item.pathname}>
+          <ListItem key={item.title} disablePadding>
+            <ListItemButton sx={{ textAlign: "center" }}>
+              <ListItemText primary={item.title} />
+            </ListItemButton>
+          </ListItem>
+        </Link>
+      ))}
+    </NavList>
+  );
+};
 
 export default Header;
+
+const NavList = styled(List)(() => ({
+  display: "flex",
+  background: "#e5e5e5",
+}));

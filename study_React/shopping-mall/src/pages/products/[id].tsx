@@ -19,7 +19,6 @@ const ProductDetailPage = () => {
 
   return (
     <>
-      <Typography variant="h3">상품상세</Typography>
       <ProductDetail item={data} />
     </>
   );

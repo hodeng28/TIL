@@ -1,4 +1,12 @@
-import { Box, List, Stack, styled, Typography } from "@mui/material";
+import {
+  Box,
+  Card,
+  CardMedia,
+  List,
+  Stack,
+  styled,
+  Typography,
+} from "@mui/material";
 import { Link } from "react-router-dom";
 import { Product } from "../../types";
 
@@ -10,7 +18,7 @@ const ProductItem = ({
   category,
   rating,
 }: Product) => (
-  <ItemList>
+  <Card>
     <Link to={`/products/${id}`}>
       <Typography variant="h6">{title}</Typography>
       <p>{category}</p>
@@ -19,7 +27,7 @@ const ProductItem = ({
       <span>{rating.count}</span>
       <span>{rating.rate}</span>
     </Link>
-  </ItemList>
+  </Card>
 );
 
 export default ProductItem;

@@ -2,7 +2,7 @@ import { useQuery } from "react-query";
 import { fetcher, QueryKeys } from "../../queryClient";
 import { Product } from "../../types";
 import ProductItem from "../../components/products/Item";
-import { Typography } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 
 const ProductList = () => {
   const { data } = useQuery<Product[]>(QueryKeys.PRODUCTS, () =>
@@ -14,12 +14,11 @@ const ProductList = () => {
 
   return (
     <>
-      <Typography variant="h3">상품목록</Typography>
-      <ul>
+      <Stack>
         {data?.map((product) => (
           <ProductItem {...product} key={product.id} />
         ))}
-      </ul>
+      </Stack>
     </>
   );
 };
