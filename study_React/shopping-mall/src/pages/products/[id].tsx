@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
-import ProductDetail from "../../components/products/details";
+import ProductDetail from "../../components/products/Details";
 import { fetcher, QueryKeys } from "../../queryClient";
 import { Product } from "../../types";
 

@@ -4,6 +4,7 @@ type BodyType = { [key: string]: any };
 
 export const getClient = (() => {
   let client: QueryClient | null = null;
+
   return () => {
     if (!client)
       client = new QueryClient({

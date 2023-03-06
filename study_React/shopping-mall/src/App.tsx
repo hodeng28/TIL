@@ -4,6 +4,7 @@ import { getClient } from "./queryClient";
 import { ReactQueryDevtools } from "react-query/devtools";
 
 import { routes } from "./routes";
+import Header from "./components/Header";
 
 const App = () => {
   const element = useRoutes(routes);
@@ -11,8 +12,9 @@ const App = () => {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <Header />
       {element}
-      <ReactQueryDevtools initialIsOpen={false} />{" "}
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
 };
