@@ -12,16 +12,21 @@
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@mui/material": "^5.11.11",
+    "graphql-request": "^5.2.0",
+    "graphql-tag": "^2.12.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-query": "^3.39.3",
     "react-router-dom": "^6.8.2",
+    "uuid": "^9.0.0",
     "vite-plugin-next-react-router": "^0.6.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
+    "@types/uuid": "^9.0.1",
     "@vitejs/plugin-react": "^3.1.0",
+    "msw": "^1.1.0",
     "typescript": "^4.9.3",
     "vite": "^4.1.0"
   }
