@@ -8,24 +8,15 @@ import {
   Typography,
 } from "@mui/material";
 import { Link } from "react-router-dom";
-import { Product } from "../../types";
+import { Product } from "../../graphql/products";
 
-const ProductItem = ({
-  id,
-  title,
-  image,
-  price,
-  category,
-  rating,
-}: Product) => (
+const ProductItem = ({ id, title, imageUrl, price, createdAt }: Product) => (
   <Card>
     <Link to={`/products/${id}`}>
       <Typography variant="h6">{title}</Typography>
-      <p>{category}</p>
-      <ItemImage src={image} />
+      <ItemImage src={imageUrl} />
       <span>{price}</span>
-      <span>{rating.count}</span>
-      <span>{rating.rate}</span>
+      <span>{createdAt}</span>
     </Link>
   </Card>
 );

@@ -1,19 +1,17 @@
 import { Box, styled, Typography } from "@mui/material";
-import { Product } from "../../types";
+import { Product } from "../../graphql/products";
 
 const ProductDetail = ({
-  item: { title, category, image, price, description, rating },
+  item: { title, imageUrl, price, description, createdAt },
 }: {
   item: Product;
 }) => (
   <Box>
     <Typography variant="h6">{title}</Typography>
-    <p>{category}</p>
     <p>{description}</p>
-    <ItemImage src={image} />
+    <ItemImage src={imageUrl} />
     <span>{price}</span>
-    <span>{rating.count}</span>
-    <span>{rating.rate}</span>
+    <span>{createdAt}</span>
   </Box>
 );
 

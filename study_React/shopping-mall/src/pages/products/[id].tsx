@@ -2,17 +2,14 @@ import { Typography } from "@mui/material";
 import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
 import ProductDetail from "../../components/products/Details";
-import { fetcher, QueryKeys } from "../../queryClient";
-import { Product } from "../../types";
+import { GET_PRODUCT, Product } from "../../graphql/products";
+import { graphqlFetcher, QueryKeys } from "../../queryClient";
 
 const ProductDetailPage = () => {
   const { id } = useParams();
 
   const { data } = useQuery<Product>([QueryKeys.PRODUCTS, id], () =>
-    fetcher({
-      method: "GET",
-      path: `/products/${id}`,
-    })
+    graphqlFetcher(GET_PRODUCT, { id })
   );
 
   if (!data) return null;

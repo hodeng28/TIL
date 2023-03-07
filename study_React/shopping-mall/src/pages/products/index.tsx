@@ -1,21 +1,20 @@
 import { useQuery } from "react-query";
-import { fetcher, QueryKeys } from "../../queryClient";
-import { Product } from "../../types";
+import { graphqlFetcher, QueryKeys } from "../../queryClient";
 import ProductItem from "../../components/products/Item";
 import { Stack, Typography } from "@mui/material";
+import { GET_PRODUCTS, Products } from "../../graphql/products";
 
 const ProductList = () => {
-  const { data } = useQuery<Product[]>(QueryKeys.PRODUCTS, () =>
-    fetcher({
-      method: "GET",
-      path: "/products",
-    })
+  const { data } = useQuery<Products>(QueryKeys.PRODUCTS, () =>
+    graphqlFetcher(GET_PRODUCTS)
   );
+
+  console.log(data);
 
   return (
     <>
       <Stack>
-        {data?.map((product) => (
+        {data?.products?.map((product) => (
           <ProductItem {...product} key={product.id} />
         ))}
       </Stack>
