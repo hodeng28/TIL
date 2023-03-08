@@ -9,8 +9,6 @@ const ProductList = () => {
     productsFetcher(GET_PRODUCTS)
   );
 
-  console.log(data);
-
   return (
     <>
       <Stack>
