@@ -1,5 +1,6 @@
 import { request, RequestDocument } from "graphql-request";
 import { QueryClient } from "react-query";
+import { Product, Products } from "./graphql/products";
 
 type BodyType = { [key: string]: any };
 
@@ -63,8 +64,11 @@ export const restFetcher = async ({
   }
 };
 
-export const graphqlFetcher = (query: RequestDocument, varialbles = {}) =>
-  request(BASE_URL, query, varialbles);
+export const productsFetcher = (query: RequestDocument, varialbles = {}) =>
+  request<Products>(BASE_URL, query, varialbles);
+
+export const productFetcher = (query: RequestDocument, varialbles = {}) =>
+  request<Product>(BASE_URL, query, varialbles);
 
 export const QueryKeys = {
   PRODUCTS: "PRODUCTS",
