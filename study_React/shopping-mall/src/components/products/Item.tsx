@@ -8,15 +8,18 @@ import {
   styled,
   Typography,
 } from "@mui/material";
+import { useMutation } from "react-query";
 import { Link } from "react-router-dom";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { cartItemSelector } from "../../atoms/cart";
+import { ADD_CART } from "../../graphql/cart";
 import { Product } from "../../graphql/products";
+import { cartAddFetcher } from "../../queryClient";
 
 const ProductItem = ({ id, title, imageUrl, price, createdAt }: Product) => {
-  const [cartAmount, setCartAmount] = useRecoilState(cartItemSelector(id));
-
-  const handleClickAddToCart = () => setCartAmount((prev) => (prev || 0) + 1);
+  const { mutate: addCart } = useMutation((id: string) =>
+    cartAddFetcher(ADD_CART, { id })
+  );
 
   return (
     <Card>
@@ -26,8 +29,7 @@ const ProductItem = ({ id, title, imageUrl, price, createdAt }: Product) => {
         <span>{price}</span>
         <span>{createdAt}</span>
       </Link>
-      <Button onClick={handleClickAddToCart}>담기</Button>
-      <span>{cartAmount || 0}</span>
+      <Button onClick={() => addCart(id)}>담기</Button>
     </Card>
   );
 };

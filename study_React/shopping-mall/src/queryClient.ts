@@ -1,5 +1,6 @@
 import { request, RequestDocument } from "graphql-request";
 import { QueryClient } from "react-query";
+import { Cart } from "./graphql/cart";
 import { Product, Products } from "./graphql/products";
 
 type BodyType = { [key: string]: any };
@@ -70,6 +71,10 @@ export const productsFetcher = (query: RequestDocument, varialbles = {}) =>
 export const productFetcher = (query: RequestDocument, varialbles = {}) =>
   request<Product>(BASE_URL, query, varialbles);
 
+export const cartAddFetcher = (query: RequestDocument, varialbles = {}) =>
+  request<Cart>(BASE_URL, query, varialbles);
+
 export const QueryKeys = {
   PRODUCTS: "PRODUCTS",
+  CART: "CART",
 };
