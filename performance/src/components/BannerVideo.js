@@ -9,7 +9,6 @@ const BannerVideo = () => {
 
   useEffect(() => {
     font.load().then(function () {
-      console.log("My Family has loaded");
       setIsFontLoaded(true);
     });
   }, []);
