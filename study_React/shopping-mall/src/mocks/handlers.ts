@@ -50,7 +50,7 @@ export const handlers = [
       if (found) {
         newData[id] = {
           ...found,
-          amount: (newData[id].amount || 0) + 1,
+          amount: 1,
         };
       }
     }
