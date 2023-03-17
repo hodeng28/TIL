@@ -33,5 +33,6 @@ export default Header;
 
 const NavList = styled(List)(() => ({
   display: "flex",
+  justifyContent: "flex-end",
   background: "#e5e5e5",
 }));

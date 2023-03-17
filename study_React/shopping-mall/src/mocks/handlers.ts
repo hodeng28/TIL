@@ -8,8 +8,8 @@ const mockProducts = (() =>
     id: i + 1 + "",
     imageUrl: `https://placeimg.com/640/480/${i + 1}`,
     price: 50000,
-    title: `임시상품${i + 1}`,
-    description: `임시상세내용${i + 1}`,
+    title: `상품${i + 1}`,
+    description: `상세내용${i + 1}`,
     createdAt: new Date(1678198149174 + i * 1000 * 60 * 60 * 10).toString(),
   })))();
 

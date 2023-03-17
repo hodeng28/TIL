@@ -10,8 +10,6 @@ import {
 } from "@mui/material";
 import { useMutation } from "react-query";
 import { Link } from "react-router-dom";
-import { useRecoilState, useRecoilValue } from "recoil";
-import { cartItemSelector } from "../../atoms/cart";
 import { ADD_CART } from "../../graphql/cart";
 import { Product } from "../../graphql/products";
 import { cartAddFetcher } from "../../queryClient";
@@ -22,24 +20,32 @@ const ProductItem = ({ id, title, imageUrl, price, createdAt }: Product) => {
   );
 
   return (
-    <Card>
+    <ItemCard>
       <Link to={`/products/${id}`}>
         <Typography variant="h6">{title}</Typography>
         <ItemImage src={imageUrl} />
-        <span>{price}</span>
-        <span>{createdAt}</span>
+        <Typography>{price}</Typography>
+        <Typography>{createdAt}</Typography>
       </Link>
-      <Button onClick={() => addCart(id)}>담기</Button>
-    </Card>
+      <AddButton variant="contained" onClick={() => addCart(id)}>
+        담기
+      </AddButton>
+    </ItemCard>
   );
 };
 
 export default ProductItem;
 
-const ItemList = styled(List)(() => ({
+const ItemCard = styled(Card)(() => ({
   width: "300px",
+  marginTop: "24px",
 }));
 
 const ItemImage = styled("img")(() => ({
   width: "100%",
+}));
+
+const AddButton = styled(Button)(() => ({
+  width: "90%",
+  margin: "16px 0",
 }));
