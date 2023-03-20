@@ -1,6 +1,5 @@
 import { graphql } from "msw";
-import { v4 as uuid } from "uuid";
-import { ADD_CART, Cart, GET_CART } from "../graphql/cart";
+import { ADD_CART, CartType, GET_CART } from "../graphql/cart";
 import GET_PRODUCTS, { GET_PRODUCT } from "../graphql/products";
 
 const mockProducts = (() =>
@@ -13,7 +12,7 @@ const mockProducts = (() =>
     createdAt: new Date(1678198149174 + i * 1000 * 60 * 60 * 10).toString(),
   })))();
 
-let cartData: { [key: string]: Cart } = {};
+let cartData: { [key: string]: CartType } = {};
 
 export const handlers = [
   graphql.query(GET_PRODUCTS, (req, res, ctx) => {
