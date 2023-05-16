@@ -1,0 +1,62 @@
+{
+	"beard_features" : [
+		{
+			"name" : "beard_no",
+			"model" : "",
+			"tex_diffuse" : "",
+			"tex_mask" : "",
+			"icon" : "icn_none"
+		},
+		{
+			"name" : "beard_000",
+			"model" : "beard/beard_000",
+			"tex_diffuse" : "beard/beard_000",
+			"tex_mask" : "beard/beard_000_m",			
+			"icon" : "beard_000"
+		},
+		{
+			"name" : "beard_001",
+			"model" : "beard/beard_001",
+			"tex_diffuse" : "beard/beard_001",
+			"tex_mask" : "beard/beard_001_m",	
+			"icon" : "beard_001"
+		}
+	],	
+	"beard_color" : [
+		{
+			"name" : "331113",
+			"icon" : "ui/colorbutton/blue",
+			"color" : "331113ff"
+		},
+		{
+			"name" : "e7e7e7",
+			"icon" : "ui/colorbutton/red",
+			"color" : "e7e7e7ff"
+		},
+		{
+			"name" : "2d2d2d",
+			"icon" : "ui/colorbutton/red",
+			"color" : "2d2d2dff"
+		},
+		{
+			"name" : "787878",
+			"icon" : "ui/colorbutton/red",
+			"color" : "787878ff"
+		},
+		{
+			"name" : "c8bda5",
+			"icon" : "ui/colorbutton/red",
+			"color" : "c8bda5ff"
+		},
+		{
+			"name" : "be8a3c",
+			"icon" : "ui/colorbutton/red",
+			"color" : "be8a3cff"
+		},
+		{
+			"name" : "292e47",
+			"icon" : "ui/colorbutton/red",
+			"color" : "292e47ff"
+		}
+	]	
+}

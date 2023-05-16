@@ -1,0 +1,71 @@
+{
+	"nose_features" : [
+		{
+			"name" : "nose_000",
+			"model" : "nose_000",
+			"texture" : "textures/nose_000",
+			"mask" : "textures/nose_000_m",
+			"plane" : "textures/noseline_1",
+			"icon" : "nose_icn_000"
+		},
+		{
+			"name" : "nose_001",
+			"model" : "nose_001",
+			"texture" : "textures/nose_001",
+			"mask" : "textures/nose_001_m",
+			"plane" : "textures/noseline_2",
+			"icon" : "nose_icn_001"
+		},
+		{
+			"name" : "nose_000",
+			"model" : "nose_002",
+			"texture" : "textures/nose_002",
+			"mask" : "textures/nose_002_m",
+			"plane" : "textures/noseline_2",
+			"icon" : "nose_icn_002"
+		},
+		{
+			"name" : "nose_000",
+			"model" : "nose_003",
+			"texture" : "textures/nose_003",
+			"mask" : "textures/nose_003_m",
+			"plane" : "textures/noseline_2",
+			"icon" : "nose_icn_003"
+		},
+		{
+			"name" : "nose_000",
+			"model" : "nose_004",
+			"texture" : "textures/nose_004",
+			"mask" : "textures/nose_004_m",
+			"plane" : "textures/noseline_2",
+			"icon" : "nose_icn_004"
+		},
+		{
+			"name" : "nose_000",
+			"model" : "nose_005",
+			"texture" : "textures/nose_005",
+			"mask" : "textures/nose_005_m",
+			"plane" : "textures/noseline_2",
+			"icon" : "nose_icn_005"
+		}
+		
+	],	
+	"nose_control" : [
+		{
+			"name" : "moveup",
+			"icon" : "controls/moveup"
+		},		
+		{
+			"name" : "scaleup",
+			"icon" : "controls/scaleup"
+		},		
+		{
+			"name" : "movedown",
+			"icon" : "controls/movedown"
+		},
+		{
+			"name" : "scaledown",
+			"icon" : "controls/scaledown"
+		}
+	]	
+}

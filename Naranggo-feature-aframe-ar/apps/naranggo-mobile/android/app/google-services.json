@@ -1,0 +1,132 @@
+{
+  "project_info": {
+    "project_number": "566611453678",
+    "project_id": "nrg2-1839f",
+    "storage_bucket": "nrg2-1839f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:566611453678:android:98941a0819a0b40fc635ff",
+        "android_client_info": {
+          "package_name": "com.ndream.nrg2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "566611453678-0ks9gbmehvj675av7dvjq3lndkqmbm29.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ndream.nrg2",
+            "certificate_hash": "dd13f19013235b435f8de1c7a1822c32dcde50e5"
+          }
+        },
+        {
+          "client_id": "566611453678-48oqqpl3jrpi4sid1mls3kgj7eu2aon8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ndream.nrg2",
+            "certificate_hash": "d37933e994701fa597515ffbf70cf1dca1d1f158"
+          }
+        },
+        {
+          "client_id": "566611453678-655cq0tnd2j37ukgubv39fep71qauusj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ndream.nrg2",
+            "certificate_hash": "b155591d75ac3065dea1659c0e699a899061dfd3"
+          }
+        },
+        {
+          "client_id": "566611453678-pcaqh40u6h2s394gt6ke7bvh2olgbjhb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ndream.nrg2",
+            "certificate_hash": "ec8f16a517c8a53190fc6095d2145a8657e96c7f"
+          }
+        },
+        {
+          "client_id": "566611453678-qrjhsdii0qck9qok7ao1hetlif4qpbdj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ndream.nrg2",
+            "certificate_hash": "2b0ac02aeaa1d59b6a52cd5435488407044053bc"
+          }
+        },
+        {
+          "client_id": "566611453678-0sn6tdsk6oaa4ljhecf219lic3cfpe7u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGhIfco-T_3GltSM2iMI9ro-ujrm-SiPA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "566611453678-0sn6tdsk6oaa4ljhecf219lic3cfpe7u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:566611453678:android:8ced83fed55fc249c635ff",
+        "android_client_info": {
+          "package_name": "com.ndream.nrg2.qa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "566611453678-802ie61dls51eniviulk8u8k9fdpltoj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ndream.nrg2.qa",
+            "certificate_hash": "dd13f19013235b435f8de1c7a1822c32dcde50e5"
+          }
+        },
+        {
+          "client_id": "566611453678-irmtcdlvjsftkj772eg1cqnlebtq5opr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ndream.nrg2.qa",
+            "certificate_hash": "2b0ac02aeaa1d59b6a52cd5435488407044053bc"
+          }
+        },
+        {
+          "client_id": "566611453678-k299f3li89gi6lpk6al5umfaebu099r4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ndream.nrg2.qa",
+            "certificate_hash": "b155591d75ac3065dea1659c0e699a899061dfd3"
+          }
+        },
+        {
+          "client_id": "566611453678-0sn6tdsk6oaa4ljhecf219lic3cfpe7u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGhIfco-T_3GltSM2iMI9ro-ujrm-SiPA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "566611453678-0sn6tdsk6oaa4ljhecf219lic3cfpe7u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
