@@ -1,0 +1,125 @@
+{
+	"eyebrow_features" : [
+		{
+			"name" : "eyebrow_000",
+			"model" : "eyebrow/eyebrow_000",
+			"model2" : "eyebrow/eyebrow_000_m",
+			"icon" : "eyebrow_000",
+			"visible" : "true"
+		},
+		{
+			"name" : "eyebrow_001",
+			"model" : "eyebrow/eyebrow_001",
+			"model2" : "eyebrow/eyebrow_001_m",
+			"icon" : "eyebrow_001",
+			"visible" : "true"
+		},
+		{
+			"name" : "eyebrow_002",
+			"model" : "eyebrow/eyebrow_002",
+			"model2" : "eyebrow/eyebrow_002_m",
+			"icon" : "eyebrow_002",
+			"visible" : "true"
+		},
+		{
+			"name" : "eyebrow_003",
+			"model" : "eyebrow/eyebrow_003",
+			"model2" : "eyebrow/eyebrow_003_m",
+			"icon" : "eyebrow_003",
+			"visible" : "true"
+		},
+		{
+			"name" : "eyebrow_004",
+			"model" : "eyebrow/eyebrow_004",
+			"model2" : "eyebrow/eyebrow_004_m",
+			"icon" : "eyebrow_004",
+			"visible" : "true"
+		},
+		{
+			"name" : "eyebrow_005",
+			"model" : "eyebrow/eyebrow_005",
+			"model2" : "eyebrow/eyebrow_005_m",
+			"icon" : "eyebrow_005",
+			"visible" : "true"
+		}		
+	],
+	"eyebrow_color" : [
+		{
+			"name" : "331113",
+			"icon" : "ui/colorbutton/blue",
+			"color" : "331113ff"
+		},
+		{
+			"name" : "e7e7e7",
+			"icon" : "ui/colorbutton/red",
+			"color" : "e7e7e7ff"
+		},
+		{
+			"name" : "2d2d2d",
+			"icon" : "ui/colorbutton/red",
+			"color" : "2d2d2dff"
+		},
+		{
+			"name" : "787878",
+			"icon" : "ui/colorbutton/red",
+			"color" : "787878ff"
+		},
+		{
+			"name" : "c8bda5",
+			"icon" : "ui/colorbutton/red",
+			"color" : "c8bda5ff"
+		},
+		{
+			"name" : "be8a3c",
+			"icon" : "ui/colorbutton/red",
+			"color" : "be8a3cff"
+		},
+		{
+			"name" : "292e47",
+			"icon" : "ui/colorbutton/red",
+			"color" : "292e47ff"
+		}
+	],
+	"eyebrow_control" : [
+		{
+            "name" : "moveup",
+            "icon" : "controls/moveup"
+        },      
+        {
+            "name" : "movedown",
+            "icon" : "controls/movedown"
+        },
+        {
+            "name" : "rotate_clockwise",
+            "icon" : "controls/rotate_clockwise"
+        },
+        {
+            "name" : "rotate_counter_clockwise",
+            "icon" : "controls/rotate_counter_clockwise"
+        },  
+        {
+            "name" : "scaledown",
+            "icon" : "controls/scaledown"
+        },
+        {
+            "name" : "scaleup",
+            "icon" : "controls/scaleup"
+        },      
+        {
+            "name" : "spreadin",
+            "icon" : "controls/spreadin"
+        },
+        {
+            "name" : "spreadout",
+            "icon" : "controls/spreadout"
+        },  
+        {
+            "name" : "scaledown_y",
+            "icon" : "controls/scaledown_y"
+        },
+        {
+            "name" : "scaleup_y",
+            "icon" : "controls/scaleup_y"
+        }
+	]	
+}

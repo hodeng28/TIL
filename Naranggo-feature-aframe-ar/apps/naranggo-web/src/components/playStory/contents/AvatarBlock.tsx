@@ -12,7 +12,6 @@ interface AvatarBlockProps {
 
 const AvatarBlock = ({ block }: AvatarBlockProps) => {
   const TestAFrame = dynamic(() => import('../../../avatarPages/TestAFrame'));
-  const ArLBSAFrame = dynamic(() => import('../../../avatarPages/ArLBSAFrame'));
 
   const { iduser, accesstoken } = useAtomValue(loginProfileAtom);
   const currentTime = Date.now();

@@ -1,0 +1,263 @@
+{
+	"shoes_features" : [
+		{
+			"name" : "shoes_000",
+			"model" : "shoes/shoes_000",
+			"texture" : "shoes/shoes_000",
+			"mask" : "shoes/shoes_000_m",
+			"icon" : "shoes_000",
+			"set" : "false"
+		},
+		{
+			"name" : "shoes_001",
+			"model" : "shoes/shoes_001",
+			"texture" : "shoes/shoes_001",
+			"mask" : "shoes/shoes_001_m",
+			"icon" : "shoes_001",
+			"set" : "false"
+		}
+		,
+		{
+			"name" : "shoes_002",
+			"model" : "shoes/shoes_002",
+			"texture" : "shoes/shoes_002",
+			"mask" : "shoes/shoes_002_m",
+			"icon" : "shoes_002",
+			"set" : "false"
+		}
+		,
+		{
+			"name" : "shoes_003",
+			"model" : "shoes/shoes_003",
+			"texture" : "shoes/shoes_003",
+			"mask" : "shoes/shoes_003_m",
+			"icon" : "shoes_003",
+			"set" : "false"
+		}
+		
+		,
+		{
+			"name" : "shoes_004",
+			"model" : "shoes/shoes_004",
+			"texture" : "shoes/shoes_004",
+			"mask" : "shoes/shoes_004_m",
+			"icon" : "shoes_004",
+			"set" : "false"
+		}
+		
+		,
+		{
+			"name" : "shoes_005",
+			"model" : "shoes/shoes_005",
+			"texture" : "shoes/shoes_005",
+			"mask" : "shoes/shoes_005_m",
+			"icon" : "shoes_005",
+			"set" : "false"
+		}
+		
+		,
+		{
+			"name" : "shoes_006",
+			"model" : "shoes/shoes_006",
+			"texture" : "shoes/shoes_006",
+			"mask" : "shoes/shoes_006_m",
+			"icon" : "shoes_006",
+			"set" : "false"
+		}
+		
+		,
+		{
+			"name" : "shoes_009",
+			"model" : "shoes/shoes_009",
+			"texture" : "shoes/shoes_009",
+			"mask" : "shoes/shoes_009_m",
+			"icon" : "shoes_009",
+			"set" : "false"
+		}
+
+		
+		,{
+			"name" : "set_shoes_007",
+			"model" : "shoes/set_shoes_007",
+			"texture" : "shoes/set_shoes_007",
+			"mask" : "shoes/set_shoes_007_m",
+			"icon" : "",
+			"set" : "true"
+		},
+		
+		{
+			"name" : "set_shoes_008",
+			"model" : "shoes/set_shoes_008",
+			"texture" : "shoes/set_shoes_008",
+			"mask" : "shoes/set_shoes_008_m",
+			"icon" : "",
+			"set" : "true"
+		}
+	],
+	
+	"shoes_colors" : [
+		{
+			"name" : "e2e2e2",			
+			"color" : "e2e2e2ff"
+		},
+		{
+			"name" : "a0a0a0",			
+			"color" : "a0a0a0ff"
+		},
+		{
+			"name" : "555555",			
+			"color" : "555555ff"
+		},
+		{
+			"name" : "222222",			
+			"color" : "222222ff"
+		}
+		,
+		{
+			"name" : "e8e0cb",			
+			"color" : "e8e0cbff"
+		}
+		,
+		{
+			"name" : "ebc9bf",			
+			"color" : "ebc9bfff"
+		}
+		,
+		{
+			"name" : "e8d3eb",			
+			"color" : "e8d3ebff"
+		}
+		,
+		{
+			"name" : "bededf",			
+			"color" : "bededfff"
+		}
+		,
+		{
+			"name" : "dedf93",			
+			"color" : "dedf93ff"
+		}
+		,
+		{
+			"name" : "eed59b",
+			"color" : "eed59bff"
+		}
+		,
+		{
+			"name" : "e8b8d5",			
+			"color" : "e8b8d5ff"
+		}
+		
+		
+		,
+		{
+			"name" : "bb9ad6",			
+			"color" : "bb9ad6ff"
+		}
+		
+		,
+		{
+			"name" : "989ed6",			
+			"color" : "989ed6ff"
+		}
+		,
+		{
+			"name" : "90b6d9",			
+			"color" : "90b6d9ff"
+		}
+		,
+		{
+			"name" : "80b2a7",			
+			"color" : "80b2a7ff"
+		}
+		,
+		{
+			"name" : "d4f136",			
+			"color" : "d4f136ff"
+		}
+		,
+		{
+			"name" : "eff136",			
+			"color" : "eff136ff"
+		}
+		,
+		{
+			"name" : "f49025",			
+			"color" : "f49025ff"
+		}
+		,
+		{
+			"name" : "e862da",			
+			"color" : "e862daff"
+		}
+		,
+		{
+			"name" : "59def1",			
+			"color" : "59def1ff"
+		}
+		,
+		{
+			"name" : "427eb5",			
+			"color" : "427eb5ff"
+		}
+		,
+		{
+			"name" : "45467c",			
+			"color" : "45467cff"
+		}
+		,
+		{
+			"name" : "6f537c",			
+			"color" : "6f537cff"
+		}
+		,
+		{
+			"name" : "674a44",			
+			"color" : "674a44ff"
+		}
+		,
+		{
+			"name" : "bb8791",			
+			"color" : "bb8791ff"
+		}
+		,
+		{
+			"name" : "885f33",			
+			"color" : "885f33ff"
+		},
+		{
+			"name" : "525833",			
+			"color" : "525833ff"
+		}
+		,
+		{
+			"name" : "205376",			
+			"color" : "205376ff"
+		}
+		,
+		{
+			"name" : "2e3a4c",			
+			"color" : "2e3a4cff"
+		},
+		{
+			"name" : "1f3722",			
+			"color" : "1f3722ff"
+		}
+		,
+		{
+			"name" : "44312c",			
+			"color" : "44312cff"
+		}
+		,
+		{
+			"name" : "4b3856",			
+			"color" : "4b3856ff"
+		}
+		,
+		{
+			"name" : "434430",			
+			"color" : "434430ff"
+		}
+		
+	]	
+}

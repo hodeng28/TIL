@@ -18,10 +18,17 @@ const Ar = () => {
     ssr: false
   });
 
+  const [aframeStatus, arStatus] = useAr();
+
+  if (aframeStatus !== 'ready' || arStatus !== 'ready') {
+    return <></>;
+  }
+
   return (
     <div>
-      <TestAFrame />
+      <ArNFT />
       {/* <ArLBSAFrame /> */}
+      {/* <TestAFrame /> */}
     </div>
   );
 };

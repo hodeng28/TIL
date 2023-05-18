@@ -36,7 +36,6 @@ const PlayStoryContents = ({
       'ItemAddBlockData',
       'GPSBlockData',
       'ScoreBlockData',
-      'ImagePatternBlockData',
       'FinishBlockData',
       'GotoBlockData',
       'InfoBlockData',

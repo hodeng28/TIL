@@ -1,0 +1,31 @@
+{
+  "name": "naranggo-mobile",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-native": "*",
+    "@testing-library/react-native": "*",
+    "react": "*",
+    "react-native": "*",
+    "react-native-config": "*",
+    "react-native-svg": "*",
+    "react-native-permissions": "*",
+    "@react-native-async-storage/async-storage": "*",
+    "metro-config": "*",
+    "react-native-webview": "*",
+    "@react-native-firebase/app": "*",
+    "@react-native-firebase/messaging": "*",
+    "react-native-geolocation-service": "*",
+    "@react-native-community/clipboard": "*",
+    "react-native-device-info": "*",
+    "@react-native-google-signin/google-signin": "*",
+    "@react-native-firebase/auth": "*",
+    "react-native-fetch-polyfill": "*",
+    "jotai": "*",
+    "next": "*",
+    "@invertase/react-native-apple-authentication": "*",
+    "react-native-exit-app": "*",
+    "react-native-splash-screen": "*",
+    "react-native-version-check": "*"
+  }
+}

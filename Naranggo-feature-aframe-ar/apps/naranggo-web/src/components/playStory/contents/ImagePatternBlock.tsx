@@ -9,15 +9,12 @@ interface ImagePatternBlockProps {
 
 const ImagePatternBlock = ({ block }: ImagePatternBlockProps) => {
   return (
-    <Wrapper>
-      <ImagePatternWrapper>
-        <ImageContent
-          src={PATH.STORY_CONTENT_IMAGE + block.src}
-          alt="picture"
-        />
-        {/* <Ar /> */}
-      </ImagePatternWrapper>
-    </Wrapper>
+    // <Wrapper>
+    <ImagePatternWrapper>
+      <ImageContent src={PATH.STORY_CONTENT_IMAGE + block.src} alt="picture" />
+      <Ar />
+    </ImagePatternWrapper>
+    // </Wrapper>
   );
 };
 
@@ -31,8 +28,8 @@ const Wrapper = styled(Stack)(() => ({
   maxWidth: '466px',
   width: '100%',
   height: '100%',
-  padding: '2%',
-  backgroundColor: theme.palette.custom.light
+  padding: '2%'
+  // backgroundColor: theme.palette.custom.light
 }));
 
 const ImagePatternWrapper = styled(Stack)(() => ({
@@ -41,9 +38,13 @@ const ImagePatternWrapper = styled(Stack)(() => ({
 
 const ImageContent = styled('img')(() => ({
   position: 'absolute',
+  left: '50%',
+  top: '110px',
+  transform: 'translateX(-50%)',
   width: '100%',
   maxHeight: '22rem',
   margin: 'auto 0',
+  padding: '0 3rem',
   borderRadius: '.625rem',
   zIndex: 9999
 }));
