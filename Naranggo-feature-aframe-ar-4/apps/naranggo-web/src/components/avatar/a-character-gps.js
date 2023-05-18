@@ -16,30 +16,33 @@ AFRAME.registerComponent('character-gps', {
             this.animixer = new THREE.AnimationMixer(r.o3d);
             this.animixer.clipAction(r.o3d.animations[0]).play();
             this.el.setObject3D('character-gps', obj3d);
-            //-!this.el.setAttribute('gps-new-entity-place', { longitude: 127.1220, latitude: 37.4950 });
+            //console.log("done. load_character");
         });
     },
     test_create_gps_position: function() {
-        const el = document.querySelector("[gps-new-camera]");
+        const el_gpscam = document.querySelector("[gps-new-camera]");
         let testEntityAdded = false;
-        el.addEventListener("gps-camera-update-position", e => {
+        el_gpscam.addEventListener("gps-camera-update-position", e => {
             if(!testEntityAdded) {
                 console.log(`Update GPS position: lon ${e.detail.position.longitude} lat ${e.detail.position.latitude}`);
+
                 //-! test 
-                this.el.setAttribute('gps-new-entity-place', {
-                    latitude: e.detail.position.latitude + 0.00002,
-                    longitude: e.detail.position.longitude - 0.00001
-                });
+                // this.el.setAttribute('gps-new-entity-place', {
+                //     latitude: e.detail.position.latitude + 0.00002,
+                //     longitude: e.detail.position.longitude - 0.00001
+                // });
 
                 testEntityAdded = true;
+                console.log('init 3d model gps position:', this.el.sceneEl.object3D);
             }
-            console.log('scene:', this.el.sceneEl.object3D);
+            console.log('gps-camera-update-position callback', e.detail.position);
         });
     },
     init: function () {
         this.load_character();
-        console.log(this.el);
-        this.test_create_gps_position();
+        console.log("init load", this.el);
+        //this.test_create_gps_position();
+        //console.log("exit init", this.el);
     },
 
     tick: function (time, timeDelta) {
