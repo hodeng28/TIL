@@ -1,0 +1,399 @@
+{
+	"pants_features" : [
+		{
+			"name" : "cloth_bottom_000",
+			"model" : "cloth_bottom/cloth_bottom_000",
+			"texture" : "cloth_bottom/cloth_bottom_000",
+			"mask" : "cloth_bottom/cloth_bottom_000_m",
+			"icon" : "cloth_bottom_000",
+			"set" : "false"
+		},		
+		{
+			"name" : "cloth_bottom_001",
+			"model" : "cloth_bottom/cloth_bottom_001",
+			"texture" : "cloth_bottom/cloth_bottom_001",
+			"mask" : "cloth_bottom/cloth_bottom_001_m",
+			"icon" : "cloth_bottom_001",
+			"set" : "false"
+		},		
+		{
+			"name" : "cloth_bottom_002",
+			"model" : "cloth_bottom/cloth_bottom_002",
+			"texture" : "cloth_bottom/cloth_bottom_002",
+			"mask" : "cloth_bottom/cloth_bottom_002_m",
+			"icon" : "cloth_bottom_002",
+			"set" : "false"
+		},		
+			
+		{
+			"name" : "cloth_bottom_003",
+			"model" : "cloth_bottom/cloth_bottom_003",
+			"texture" : "cloth_bottom/cloth_bottom_003",
+			"mask" : "cloth_bottom/cloth_bottom_003_m",
+			"icon" : "cloth_bottom_003",
+			"set" : "false"
+		},		
+		
+				
+		{
+			"name" : "cloth_bottom_004",
+			"model" : "cloth_bottom/cloth_bottom_004",
+			"texture" : "cloth_bottom/cloth_bottom_004",
+			"mask" : "cloth_bottom/cloth_bottom_004_m",
+			"icon" : "cloth_bottom_004",
+			"set" : "false"
+		},		
+		
+				
+		{
+			"name" : "cloth_bottom_005",
+			"model" : "cloth_bottom/cloth_bottom_005",
+			"texture" : "cloth_bottom/cloth_bottom_005",
+			"mask" : "cloth_bottom/cloth_bottom_005_m",
+			"icon" : "cloth_bottom_005",
+			"set" : "false"
+		},		
+		
+				
+		{
+			"name" : "cloth_bottom_006",
+			"model" : "cloth_bottom/cloth_bottom_006",
+			"texture" : "cloth_bottom/cloth_bottom_006",
+			"mask" : "cloth_bottom/cloth_bottom_006_m",
+			"icon" : "cloth_bottom_006",
+			"set" : "false"
+		},		
+		
+				
+		{
+			"name" : "cloth_bottom_007",
+			"model" : "cloth_bottom/cloth_bottom_007",
+			"texture" : "cloth_bottom/cloth_bottom_007",
+			"mask" : "cloth_bottom/cloth_bottom_007_m",
+			"icon" : "cloth_bottom_007",
+			"set" : "false"
+		},		
+		
+		{
+			"name" : "set_cloth_bottom_008",
+			"model" : "cloth_bottom/set_cloth_bottom_008",
+			"texture" : "cloth_bottom/set_cloth_bottom_008",
+			"mask" :    "cloth_bottom/set_cloth_bottom_008_m",
+			"icon" : "",
+			"set" : "true"
+		}		
+		
+		,		
+		
+		{
+			"name" : "set_cloth_bottom_009",
+			"model" : "cloth_bottom/set_cloth_bottom_009",
+			"texture" : "cloth_bottom/set_cloth_bottom_009",
+			"mask" :    "cloth_bottom/set_cloth_bottom_009_m",
+			"icon" : "",
+			"set" : "true"
+		}
+		
+		,		
+		
+		{
+			"name" : "set_cloth_bottom_010",
+			"model" : "cloth_bottom/set_cloth_bottom_010",
+			"texture" : "cloth_bottom/set_cloth_bottom_010",
+			"mask" :    "cloth_bottom/set_cloth_bottom_010_m",
+			"icon" : "",
+			"set" : "true"
+		}
+		,		
+		
+		{
+			"name" : "set_cloth_bottom_011",
+			"model" : "cloth_bottom/set_cloth_bottom_011",
+			"texture" : "cloth_bottom/set_cloth_bottom_011",
+			"mask" :    "cloth_bottom/set_cloth_bottom_011_m",
+			"icon" : "",
+			"set" : "true"
+		}
+		,		
+		
+		{
+			"name" : "set_cloth_bottom_012",
+			"model" : "cloth_bottom/set_cloth_bottom_012",
+			"texture" : "cloth_bottom/set_cloth_bottom_012",
+			"mask" :    "cloth_bottom/set_cloth_bottom_012_m",
+			"icon" : "",
+			"set" : "true"
+		}
+		,		
+		
+		{
+			"name" : "set_cloth_bottom_013",
+			"model" : "cloth_bottom/set_cloth_bottom_013",
+			"texture" : "cloth_bottom/set_cloth_bottom_013",
+			"mask" :    "cloth_bottom/set_cloth_bottom_013_m",
+			"icon" : "",
+			"set" : "true"
+		}
+		,		
+		
+		{
+			"name" : "set_cloth_bottom_014",
+			"model" : "cloth_bottom/set_cloth_bottom_014",
+			"texture" : "cloth_bottom/set_cloth_bottom_014",
+			"mask" :    "cloth_bottom/set_cloth_bottom_014_m",
+			"icon" : "",
+			"set" : "true"
+		}
+		,		
+		
+		{
+			"name" : "set_cloth_bottom_015",
+			"model" : "cloth_bottom/set_cloth_bottom_015",
+			"texture" : "cloth_bottom/set_cloth_bottom_015",
+			"mask" :    "cloth_bottom/set_cloth_bottom_015_m",
+			"icon" : "",
+			"set" : "true"
+		}
+		,		
+		
+		{
+			"name" : "set_cloth_bottom_016",
+			"model" : "cloth_bottom/set_cloth_bottom_016",
+			"texture" : "cloth_bottom/set_cloth_bottom_016",
+			"mask" :    "cloth_bottom/set_cloth_bottom_016_m",
+			"icon" : "",
+			"set" : "true"
+		}
+		,		
+		
+		{
+			"name" : "set_cloth_bottom_017",
+			"model" : "cloth_bottom/set_cloth_bottom_017",
+			"texture" : "cloth_bottom/set_cloth_bottom_017",
+			"mask" :    "cloth_bottom/set_cloth_bottom_017_m",
+			"icon" : "",
+			"set" : "true"
+		}
+		,		
+		
+		{
+			"name" : "set_cloth_bottom_018",
+			"model" : "cloth_bottom/set_cloth_bottom_018",
+			"texture" : "cloth_bottom/set_cloth_bottom_018",
+			"mask" :    "cloth_bottom/set_cloth_bottom_018_m",
+			"icon" : "",
+			"set" : "true"
+		},		
+		
+		{
+			"name" : "cloth_bottom_023",
+			"model" : "cloth_bottom/cloth_bottom_023",
+			"texture" : "cloth_bottom/cloth_bottom_023",
+			"mask" :    "cloth_bottom/cloth_bottom_023_m",
+			"icon" : "cloth_bottom_023",
+			"set" : "false"
+		},		
+		
+		{
+			"name" : "cloth_bottom_024",
+			"model" : "cloth_bottom/cloth_bottom_024",
+			"texture" : "cloth_bottom/cloth_bottom_024",
+			"mask" :    "cloth_bottom/cloth_bottom_024_m",
+			"icon" : "cloth_bottom_024",
+			"set" : "false"
+		},		
+		
+		{
+			"name" : "set_cloth_bottom_020",
+			"model" : "cloth_bottom/set_cloth_bottom_020",
+			"texture" : "cloth_bottom/set_cloth_bottom_020",
+			"mask" :    "cloth_bottom/set_cloth_bottom_020_m",
+			"icon" : "",
+			"set" : "true"
+		},		
+		
+		{
+			"name" : "set_cloth_bottom_021",
+			"model" : "cloth_bottom/set_cloth_bottom_021",
+			"texture" : "cloth_bottom/set_cloth_bottom_021",
+			"mask" :    "cloth_bottom/set_cloth_bottom_021_m",
+			"icon" : "",
+			"set" : "true"
+		},		
+		
+		{
+			"name" : "set_cloth_bottom_022",
+			"model" : "cloth_bottom/set_cloth_bottom_022",
+			"texture" : "cloth_bottom/set_cloth_bottom_022",
+			"mask" :    "cloth_bottom/set_cloth_bottom_022_m",
+			"icon" : "",
+			"set" : "true"
+		}
+	],
+	
+	"pants_color" : [
+		{
+			"name" : "e2e2e2",			
+			"color" : "e2e2e2ff"
+		},
+		{
+			"name" : "a0a0a0",			
+			"color" : "a0a0a0ff"
+		},
+		{
+			"name" : "555555",			
+			"color" : "555555ff"
+		},
+		{
+			"name" : "222222",			
+			"color" : "222222ff"
+		}
+		,
+		{
+			"name" : "e8e0cb",			
+			"color" : "e8e0cbff"
+		}
+		,
+		{
+			"name" : "ebc9bf",			
+			"color" : "ebc9bfff"
+		}
+		,
+		{
+			"name" : "e8d3eb",			
+			"color" : "e8d3ebff"
+		}
+		,
+		{
+			"name" : "bededf",			
+			"color" : "bededfff"
+		}
+		,
+		{
+			"name" : "dedf93",			
+			"color" : "dedf93ff"
+		}
+		,
+		{
+			"name" : "eed59b",
+			"color" : "eed59bff"
+		}
+		,
+		{
+			"name" : "e8b8d5",			
+			"color" : "e8b8d5ff"
+		}
+		
+		
+		,
+		{
+			"name" : "bb9ad6",			
+			"color" : "bb9ad6ff"
+		}
+		
+		,
+		{
+			"name" : "989ed6",			
+			"color" : "989ed6ff"
+		}
+		,
+		{
+			"name" : "90b6d9",			
+			"color" : "90b6d9ff"
+		}
+		,
+		{
+			"name" : "80b2a7",			
+			"color" : "80b2a7ff"
+		}
+		,
+		{
+			"name" : "d4f136",			
+			"color" : "d4f136ff"
+		}
+		,
+		{
+			"name" : "eff136",			
+			"color" : "eff136ff"
+		}
+		,
+		{
+			"name" : "f49025",			
+			"color" : "f49025ff"
+		}
+		,
+		{
+			"name" : "e862da",			
+			"color" : "e862daff"
+		}
+		,
+		{
+			"name" : "59def1",			
+			"color" : "59def1ff"
+		}
+		,
+		{
+			"name" : "427eb5",			
+			"color" : "427eb5ff"
+		}
+		,
+		{
+			"name" : "45467c",			
+			"color" : "45467cff"
+		}
+		,
+		{
+			"name" : "6f537c",			
+			"color" : "6f537cff"
+		}
+		,
+		{
+			"name" : "674a44",			
+			"color" : "674a44ff"
+		}
+		,
+		{
+			"name" : "bb8791",			
+			"color" : "bb8791ff"
+		}
+		,
+		{
+			"name" : "885f33",			
+			"color" : "885f33ff"
+		},
+		{
+			"name" : "525833",			
+			"color" : "525833ff"
+		}
+		,
+		{
+			"name" : "205376",			
+			"color" : "205376ff"
+		}
+		,
+		{
+			"name" : "2e3a4c",			
+			"color" : "2e3a4cff"
+		},
+		{
+			"name" : "1f3722",			
+			"color" : "1f3722ff"
+		}
+		,
+		{
+			"name" : "44312c",			
+			"color" : "44312cff"
+		}
+		,
+		{
+			"name" : "4b3856",			
+			"color" : "4b3856ff"
+		}
+		,
+		{
+			"name" : "434430",			
+			"color" : "434430ff"
+		}
+		
+	]	
+}

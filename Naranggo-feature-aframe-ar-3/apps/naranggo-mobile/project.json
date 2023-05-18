@@ -1,0 +1,91 @@
+{
+  "name": "naranggo-mobile",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/naranggo-mobile/src",
+  "projectType": "application",
+  "targets": {
+    "start": {
+      "executor": "@nrwl/react-native:start",
+      "options": {
+        "port": 8081,
+        "resetCache": true
+      }
+    },
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx start naranggo-mobile"
+      }
+    },
+    "run-ios": {
+      "executor": "@nrwl/react-native:run-ios",
+      "options": {}
+    },
+    "bundle-ios": {
+      "executor": "@nrwl/react-native:bundle",
+      "outputs": ["apps/naranggo-mobile/build"],
+      "options": {
+        "entryFile": "src/main.ts",
+        "platform": "ios",
+        "bundleOutput": "apps/naranggo-mobile/ios/main.jsbundle",
+        "dev": false
+      }
+    },
+    "run-android": {
+      "executor": "@nrwl/react-native:run-android",
+      "options": {}
+    },
+    "build-android": {
+      "executor": "@nrwl/react-native:build-android",
+      "outputs": [
+        "apps/naranggo-mobile/android/app/build/outputs/bundle",
+        "apps/naranggo-mobile/android/app/build/outputs/apk"
+      ],
+      "options": {
+        "gradleTask": "assembleRelease"
+      }
+    },
+    "build-android-qa": {
+      "executor": "@nrwl/react-native:build-android",
+      "outputs": [
+        "apps/naranggo-mobile/android/app/build/outputs/bundle",
+        "apps/naranggo-mobile/android/app/build/outputs/apk"
+      ],
+      "options": {
+        "gradleTask": "assembleQa"
+      }
+    },
+    "bundle-android": {
+      "executor": "@nrwl/react-native:bundle",
+      "options": {
+        "entryFile": "src/main.ts",
+        "platform": "android",
+        "bundleOutput": "dist/apps/naranggo-mobile/android/main.jsbundle"
+      }
+    },
+    "sync-deps": {
+      "executor": "@nrwl/react-native:sync-deps",
+      "options": {}
+    },
+    "ensure-symlink": {
+      "executor": "@nrwl/react-native:ensure-symlink",
+      "options": {}
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/naranggo-mobile/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/naranggo-mobile"],
+      "options": {
+        "jestConfig": "apps/naranggo-mobile/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
