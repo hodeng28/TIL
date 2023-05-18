@@ -1,0 +1,136 @@
+{
+	"lip_features" : [
+		{
+			"name" : "mouth_000",
+			"model" : "mouth/mouth_000",
+			"model2" : "mouth/mouth_000_m",			
+			"icon" : "mouth_000"
+		},
+		{
+			"name" : "mouth_001",
+			"model" : "mouth/mouth_001",
+			"model2" : "mouth/mouth_001_m",
+			"icon" : "mouth_001"
+		},
+		{
+			"name" : "mouth_002",
+			"model" : "mouth/mouth_002",
+			"model2" : "mouth/mouth_002_m",
+			"icon" : "mouth_002"
+		},
+		{
+			"name" : "mouth_003",
+			"model" : "mouth/mouth_003",
+			"model2" : "mouth/mouth_003_m",
+			"icon" : "mouth_003"
+		},
+		{
+			"name" : "mouth_004",
+			"model" : "mouth/mouth_004",
+			"model2" : "mouth/mouth_004_m",
+			"icon" : "mouth_004"
+		},
+		{
+			"name" : "mouth_005",
+			"model" : "mouth/mouth_005",
+			"model2" : "mouth/mouth_005_m",
+			"icon" : "mouth_005"
+		}
+		,
+		{
+			"name" : "mouth_006",
+			"model" : "mouth/mouth_006",
+			"model2" : "mouth/mouth_006_m",
+			"icon" : "mouth_006"
+		}
+		,
+		{
+			"name" : "mouth_007",
+			"model" : "mouth/mouth_007",
+			"model2" : "mouth/mouth_007_m",
+			"icon" : "mouth_007"
+		}
+		,
+		{
+			"name" : "mouth_008",
+			"model" : "mouth/mouth_008",
+			"model2" : "mouth/mouth_008_m",
+			"icon" : "mouth_008"
+		}
+		,
+		{
+			"name" : "mouth_009",
+			"model" : "mouth/mouth_009",
+			"model2" : "mouth/mouth_009_m",
+			"icon" : "mouth_009"
+		}		
+	],
+	"lip_color" : [
+		{
+			"name" : "ffab9a",			
+			"color" : "ffab9aff"
+		},
+		{
+			"name" : "ffbbdb",			
+			"color" : "ffbbdbff"
+		},
+		{
+			"name" : "fa7156",			
+			"color" : "fa7156ff"
+		},
+		{
+			"name" : "ff719f",			
+			"color" : "ff719fff"
+		}		
+		
+		
+		,
+		{
+			"name" : "bb371d",			
+			"color" : "bb371dff"
+		}		
+		
+		,
+		{
+			"name" : "a66430",			
+			"color" : "a66430ff"
+		}		
+		
+		,
+		{
+			"name" : "9c8ff7",			
+			"color" : "9c8ff7ff"
+		}		
+		
+		,
+		{
+			"name" : "4a9d85",			
+			"color" : "4a9d85ff"
+		}		
+		
+		,
+		{
+			"name" : "414141",			
+			"color" : "414141ff"
+		}		
+		
+	],
+	"lip_control" : [
+        {
+            "name" : "moveup",
+            "icon" : "controls/moveup"
+        },      
+        {
+            "name" : "movedown",
+            "icon" : "controls/movedown"
+        },
+        {
+            "name" : "scaledown",
+            "icon" : "controls/scaledown"
+        },
+        {
+            "name" : "scaleup",
+            "icon" : "controls/scaleup"
+        }
+	]	
+}

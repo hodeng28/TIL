@@ -1,0 +1,105 @@
+{
+	"mustache_features" : [
+		{
+			"name" : "mustache_no",
+			"model" : "",
+			"model2" : "",
+			"icon" : "icn_none"
+		},		
+		{
+			"name" : "mustache_000",
+			"model" : "mustache/mustache_000",
+			"model2" : "mustache/mustache_000_m",
+			"icon" : "mustache_000"
+		}
+		,		
+		{
+			"name" : "mustache_001",
+			"model" : "mustache/mustache_001",
+			"model2" : "mustache/mustache_001_m",
+			"icon" : "mustache_001"
+		},
+		{
+			"name" : "mustache_002",
+			"model" : "mustache/mustache_002",
+			"model2" : "mustache/mustache_002_m",
+			"icon" : "mustache_002"
+		}
+		,
+		{
+			"name" : "mustache_003",
+			"model" : "mustache/mustache_003",
+			"model2" : "mustache/mustache_003_m",
+			"icon" : "mustache_003"
+		}
+		,
+		{
+			"name" : "mustache_004",
+			"model" : "mustache/mustache_004",
+			"model2" : "mustache/mustache_004_m",
+			"icon" : "mustache_004"
+		}
+		,
+		{
+			"name" : "mustache_005",
+			"model" : "mustache/mustache_005",
+			"model2" : "mustache/mustache_005_m",
+			"icon" : "mustache_005"
+		}
+	],
+	"mustache_color" : [
+		{
+			"name" : "331113",
+			"icon" : "ui/colorbutton/blue",
+			"color" : "331113ff"
+		},
+		{
+			"name" : "e7e7e7",
+			"icon" : "ui/colorbutton/red",
+			"color" : "e7e7e7ff"
+		},
+		{
+			"name" : "2d2d2d",
+			"icon" : "ui/colorbutton/red",
+			"color" : "2d2d2dff"
+		},
+		{
+			"name" : "787878",
+			"icon" : "ui/colorbutton/red",
+			"color" : "787878ff"
+		},
+		{
+			"name" : "c8bda5",
+			"icon" : "ui/colorbutton/red",
+			"color" : "c8bda5ff"
+		},
+		{
+			"name" : "be8a3c",
+			"icon" : "ui/colorbutton/red",
+			"color" : "be8a3cff"
+		},
+		{
+			"name" : "292e47",
+			"icon" : "ui/colorbutton/red",
+			"color" : "292e47ff"
+		}	
+	],
+	"mustache_control" : [
+		{
+            "name" : "moveup",
+            "icon" : "controls/moveup"
+        },      
+        {
+            "name" : "movedown",
+            "icon" : "controls/movedown"
+        },
+        {
+            "name" : "scaledown",
+            "icon" : "controls/scaledown"
+        },
+        {
+            "name" : "scaleup",
+            "icon" : "controls/scaleup"
+        }
+	]	
+}

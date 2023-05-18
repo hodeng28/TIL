@@ -1,0 +1,37 @@
+import { useEffect, useState } from 'react';
+
+export const useSessionStorage = (key: string, initialValue: unknown) => {
+  const [storedValue, setStoredValue] = useState(() => {
+    if (typeof window === 'undefined') {
+      return initialValue;
+    }
+
+    try {
+      const item = window.sessionStorage.getItem(key);
+      return item ? JSON.parse(item) : initialValue;
+    } catch (error) {
+      console.log(error);
+      return initialValue;
+    }
+  });
+
+  const setValue = (value: unknown) => {
+    try {
+      setStoredValue(value);
+      if (typeof window !== 'undefined') {
+        window.sessionStorage.setItem(key, JSON.stringify(value));
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const item = window.sessionStorage.getItem(key);
+      !item && window.sessionStorage.setItem(key, JSON.stringify(initialValue));
+    }
+  }, [initialValue, key]);
+
+  return [storedValue, setValue];
+};

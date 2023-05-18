@@ -1,0 +1,74 @@
+{
+	"glass_features" : [
+		{
+			"name" : "noglass",
+			"model" : "",
+			"model2" : "",
+			"icon" : "icn_none"
+		},		
+		{
+			"name" : "glass01",
+			"model" : "glass/glass_000",
+			"model2" : "glass/glass_000_m",
+			"icon" : "glass_icn_000"
+		}
+		,		
+		{
+			"name" : "glass02",
+			"model" : "glass/glass_001",
+			"model2" : "glass/glass_001_m",
+			"icon" : "glass_icn_001"
+		}
+	],
+	"glass_color" : [
+		{
+			"name" : "2d2d2d",
+			"icon" : "ui/colorbutton/black",
+			"color" : "2d2d2dff"
+		},
+		{
+			"name" : "5f2e90",
+			"icon" : "ui/colorbutton/blue",
+			"color" : "5f2e90ff"
+		},
+		{
+			"name" : "9e1c20",
+			"icon" : "ui/colorbutton/red",
+			"color" : "9e1c20ff"
+		},
+		{
+			"name" : "7a682a",
+			"icon" : "ui/colorbutton/white",
+			"color" : "7a682aff"
+		},
+		{
+			"name" : "025a7a",
+			"icon" : "ui/colorbutton/white",
+			"color" : "025a7aff"
+		},
+		{
+			"name" : "c9d2e1",
+			"icon" : "ui/colorbutton/white",
+			"color" : "c9d2e1ff"
+		}
+		
+	],
+	"glass_control" : [
+        {
+            "name" : "moveup",
+            "icon" : "controls/moveup"
+        },      
+        {
+            "name" : "movedown",
+            "icon" : "controls/movedown"
+        },
+        {
+            "name" : "scaledown",
+            "icon" : "controls/scaledown"
+        },
+        {
+            "name" : "scaleup",
+            "icon" : "controls/scaleup"
+        }
+	]	
+}

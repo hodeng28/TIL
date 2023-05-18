@@ -1,0 +1,64 @@
+{
+  "name": "naranggo-web",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/naranggo-web",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "root": "apps/naranggo-web",
+        "outputPath": "dist/apps/naranggo-web"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "apps/naranggo-web"
+        },
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "naranggo-web:build",
+        "dev": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "naranggo-web:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "naranggo-web:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nrwl/next:export",
+      "options": {
+        "buildTarget": "naranggo-web:build:production"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/naranggo-web"],
+      "options": {
+        "jestConfig": "apps/naranggo-web/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/naranggo-web/**/*.{ts,tsx,js,jsx}"],
+        "ignorePath": "apps/naranggo-web/.eslintignore"
+      }
+    }
+  },
+  "tags": []
+}
